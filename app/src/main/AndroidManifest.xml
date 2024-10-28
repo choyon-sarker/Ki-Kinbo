@@ -13,6 +13,9 @@
         android:theme="@style/Theme.KiKinbo"
         tools:targetApi="31">
         <activity
+            android:name=".SearchProduct"
+            android:exported="false" />
+        <activity
             android:name=".ViewProduct"
             android:exported="false" />
         <activity

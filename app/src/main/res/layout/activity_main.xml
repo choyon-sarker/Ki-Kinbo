@@ -20,12 +20,11 @@
             android:layout_gravity="center_vertical"
             app:boxStrokeColor="@color/black"
             app:hintTextColor="@color/black"
-            app:startIconDrawable="@drawable/baseline_person_24"
             app:startIconTint="@color/black"
             >
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/ti_signin"
+                android:id="@+id/ti"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint=" Enter Your ID"
@@ -65,7 +64,6 @@
             <LinearLayout
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
-                android:background="@color/skyblue"
                 android:orientation="vertical"
                 android:padding="20dp">
 
@@ -73,8 +71,9 @@
                     android:id="@+id/imageView"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
+                    android:scaleType="centerCrop"
                     android:layout_gravity="center"
-                    android:src="@drawable/baseline_sticky_note_2_24" />
+                    android:src="@drawable/headphone" />
 
                 <TextView
                     android:id="@+id/textView3"
@@ -102,15 +101,13 @@
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
 
-                android:background="@color/skyblue"
                 android:orientation="vertical"
                 android:padding="20dp">
 
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/baseline_edit_note_24" />
+                    android:layout_gravity="center"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -146,7 +143,6 @@
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
 
-                android:background="@color/skyblue"
                 android:orientation="vertical"
                 android:padding="20dp">
 
@@ -155,8 +151,7 @@
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/baseline_speaker_notes_24" />
-
+                    />
                 <TextView
 
                     android:layout_width="match_parent"
@@ -185,7 +180,6 @@
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
 
-                android:background="@color/skyblue"
                 android:orientation="vertical"
                 android:padding="20dp">
 
@@ -193,8 +187,7 @@
 
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/baseline_track_changes_24" />
+                    android:layout_gravity="center"/>
 
                 <TextView
 
@@ -231,7 +224,6 @@
             <LinearLayout
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
-                android:background="@color/skyblue"
                 android:orientation="vertical"
                 android:padding="20dp">
 
@@ -239,8 +231,7 @@
 
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/baseline_assist_walker_24" />
+                    android:layout_gravity="center"/>
 
                 <TextView
 
@@ -269,7 +260,6 @@
             <LinearLayout
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
-                android:background="@color/skyblue"
                 android:orientation="vertical"
                 android:padding="20dp">
 
@@ -277,8 +267,7 @@
 
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/baseline_settings_suggest_24" />
+                    android:layout_gravity="center"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
