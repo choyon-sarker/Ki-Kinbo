@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -81,7 +81,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="Reports" />
+                    android:text="Headphone" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -114,7 +114,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Medical Card"
+                    android:text="Mouse"
                     android:gravity="center"/>
             </LinearLayout>
 
@@ -159,7 +159,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="View Profile" />
+                    android:text="Pen" />
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
@@ -196,7 +196,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="Update Profile" />
+                    android:text="Pencil" />
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
@@ -240,7 +240,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="Medical Assistant " />
+                    android:text="Juice " />
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
@@ -275,7 +275,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="Setting" />
+                    android:text="Candy" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>

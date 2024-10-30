@@ -1,4 +1,4 @@
-package com.devdroid.kikinbo
+package com.devdroid.kikinbo.view
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.devdroid.kikinbo.R
+import com.devdroid.kikinbo.ViewProduct
 import com.google.firebase.database.FirebaseDatabase
 
 class MainActivity : AppCompatActivity() {
