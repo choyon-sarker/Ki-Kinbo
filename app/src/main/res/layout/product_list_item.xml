@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:text="Product name"
             android:layout_margin="10dp"
-            android:textStyle="italic"
+            android:textStyle="bold"
             android:textSize="24dp"/>
         <LinearLayout
             android:orientation="horizontal"
@@ -34,13 +34,18 @@
                 android:layout_gravity="center_vertical"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:text="Product Name : "
+                android:text="Product Name "
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=": "
                 android:textStyle="bold"/>
             <TextView
                 android:id="@+id/tvProductNameid2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Product Name"
+                android:text="Name"
                 android:textStyle="bold"
                 android:layout_margin="5dp"
                 android:textSize="20dp"/>
@@ -53,13 +58,18 @@
             <TextView
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:text="Product Catagory : "
+                android:text="Product Catagory"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=": "
                 android:textStyle="bold"/>
             <TextView
                 android:id="@+id/tvProductCatagoryid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Product Catagory"
+                android:text="Catagory"
                 android:textStyle="bold"
                 android:layout_margin="5dp"
                 android:textSize="20dp"/>
@@ -72,13 +82,19 @@
                 android:layout_gravity="center_vertical"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:text="Product Price : "
+                android:text="Product Price"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=": "
                 android:textStyle="bold"/>
             <TextView
                 android:id="@+id/tvProductPriceid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Product Price"
+                android:text="Price"
+                android:layout_margin="5dp"
                 android:textStyle="bold"
                 android:textSize="20dp"/>
 
@@ -92,13 +108,18 @@
             <TextView
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:text="Product Review : "
+                android:text="Product Review "
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=": "
                 android:textStyle="bold"/>
             <TextView
                 android:id="@+id/tvProductReviewid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Product Review"
+                android:text="Review"
                 android:textStyle="bold"
                 android:layout_margin="5dp"
                 android:textSize="20dp"/>
@@ -111,13 +132,18 @@
             <TextView
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:text="Product Rating : "
+                android:text="Product Rating "
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=": "
                 android:textStyle="bold"/>
             <TextView
                 android:id="@+id/tvProductRatingid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Product Rating"
+                android:text="Rating"
                 android:textStyle="bold"
                 android:layout_margin="5dp"
                 android:textSize="20dp"/>
