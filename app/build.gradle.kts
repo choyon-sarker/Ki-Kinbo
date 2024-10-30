@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.google.gms.google.services)
+    id("org.jetbrains.dokka") version "1.9.20"
 }
 
 android {
@@ -35,6 +36,11 @@ android {
         jvmTarget = "1.8"
     }
 }
+tasks.dokkaHtml {
+    outputDirectory.set(buildDir.resolve("dokka"))
+}
+
+
 
 dependencies {
 
@@ -48,4 +54,5 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation("org.jetbrains.dokka:dokka-core:1.7.10")
 }
