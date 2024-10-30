@@ -1,10 +1,12 @@
-package com.devdroid.kikinbo
+package com.devdroid.kikinbo.view.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.devdroid.kikinbo.R
+import com.devdroid.kikinbo.model.ProductDataModel
 
 class SearchProductAdapter(private val productList: List<ProductDataModel>):RecyclerView.Adapter<SearchProductAdapter.ViewHolder>() {
 
@@ -12,12 +14,12 @@ class SearchProductAdapter(private val productList: List<ProductDataModel>):Recy
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): SearchProductAdapter.ViewHolder {
+    ): ViewHolder {
         val itemView=LayoutInflater.from(parent.context).inflate(R.layout.product_list_item,parent,false)
         return ViewHolder(itemView)
     }
 
-    override fun onBindViewHolder(holder: SearchProductAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentProduct=productList[position]
         holder.tvProName1.text=currentProduct.productName
         holder.tvProName2.text=currentProduct.productName

@@ -13,13 +13,13 @@
         android:theme="@style/Theme.KiKinbo"
         tools:targetApi="31">
         <activity
-            android:name=".SearchProduct"
+            android:name=".view.SearchProductView"
             android:exported="false" />
         <activity
             android:name=".ViewProduct"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".view.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

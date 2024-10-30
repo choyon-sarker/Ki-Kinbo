@@ -1,4 +1,4 @@
-package com.devdroid.kikinbo
+package com.devdroid.kikinbo.view
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -8,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.devdroid.kikinbo.R
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.database.FirebaseDatabase
 
@@ -27,32 +28,22 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         val hometi1:TextInputEditText=findViewById(R.id.hometi1)
-//        hometi1.setOnClickListener {
-//            val i=Intent(this,SearchProduct::class.java)
-//        }
+
         hometi1.setOnTouchListener { _, event ->
             if (event.action == MotionEvent.ACTION_UP) {
-                val i = Intent(this, SearchProduct::class.java)
+                val i = Intent(this, SearchProductView::class.java)
                 startActivity(i)
                 return@setOnTouchListener true // Consumed the event
             }
             false
         }
 
-//        pushProductData()
+        //when we want to push product data on firebase database
+        // Create an instance of PushProductData
+        //val pushProductData = PushProductData()
+
+        // Call the function directly
+        //pushProductData.pushProductData()
+
     }
-//    private fun pushProductData() {
-//        databaseRef.push().setValue(product1)
-//        databaseRef.push().setValue(product2)
-//        databaseRef.push().setValue(product3)
-//        databaseRef.push().setValue(product4)
-//        databaseRef.push().setValue(product5)
-//        databaseRef.push().setValue(product6)
-//            .addOnSuccessListener {
-//                println("Product data added successfully!")
-//            }
-//            .addOnFailureListener { e ->
-//                println("Failed to add product data: ${e.message}")
-//            }
-//    }
 }

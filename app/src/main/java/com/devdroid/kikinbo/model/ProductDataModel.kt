@@ -1,4 +1,4 @@
-package com.devdroid.kikinbo
+package com.devdroid.kikinbo.model
 
 data class ProductDataModel(
     val productId:String?=null,
@@ -9,7 +9,7 @@ data class ProductDataModel(
     val productReview:String?=null,
     val productCategory:String?=null,
     )
-/*
+
 val product1 = ProductDataModel(
     productId = "Headphoneid",
     productName = "Headphone",
@@ -77,7 +77,7 @@ val product6 = ProductDataModel(
     productCategory = "Food"
 )
 
- */
+
 
 
 
