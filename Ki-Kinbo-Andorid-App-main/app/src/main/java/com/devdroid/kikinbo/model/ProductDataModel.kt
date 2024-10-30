@@ -1,14 +1,29 @@
 package com.devdroid.kikinbo.model
 
+/**
+ * Data model representing a product in the Ki-Kinbo!! online shop.
+ *
+ * This class contains all the essential details of a product, such as its ID,
+ * name, price, rating, description, user reviews, and the category it belongs to.
+ *
+ * @property productId The unique identifier of the product.
+ * @property productName The name of the product.
+ * @property productPrice The price of the product in integer format (e.g., 100).
+ * @property productRating The average user rating for the product, represented as a double.
+ * @property productDetail A detailed description of the product, including features and specifications.
+ * @property productReview User reviews or feedback provided for the product.
+ * @property productCategory The category or type the product belongs to (e.g., Electronics, Fashion).
+ */
 data class ProductDataModel(
-    val productId:String?=null,
-    val productName:String?=null,
-    val productPrice:Int?=null,
-    val productRating:Double?=null,
-    val productDetail: String?=null,
-    val productReview:String?=null,
-    val productCategory:String?=null,
-    )
+    val productId: String? = null,
+    val productName: String? = null,
+    val productPrice: Int? = null,
+    val productRating: Double? = null,
+    val productDetail: String? = null,
+    val productReview: String? = null,
+    val productCategory: String? = null
+)
+
 /*
 val product1 = ProductDataModel(
     productId = "Headphoneid",

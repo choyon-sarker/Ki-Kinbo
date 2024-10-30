@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.google.gms.google.services)
+    id("org.jetbrains.dokka") version "1.9.0"
 
 }
 
@@ -17,6 +18,13 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+    packaging {
+        resources {
+            // Exclude conflicting files
+            excludes += "META-INF/NOTICE.md"
+            excludes += "META-INF/LICENSE.md" // Optional, if similar conflicts occur
+        }
     }
 
     buildTypes {
@@ -36,6 +44,7 @@ android {
         jvmTarget = "1.8"
     }
 }
+tasks.dokkaHtml.configure { outputDirectory.set(file("../documentation/html")) }
 
 dependencies {
 
@@ -49,4 +58,5 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation("org.jetbrains.dokka:dokka-core:1.9.0")
 }

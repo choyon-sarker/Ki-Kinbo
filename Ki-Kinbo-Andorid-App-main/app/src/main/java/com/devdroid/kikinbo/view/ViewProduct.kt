@@ -1,4 +1,4 @@
-package com.devdroid.kikinbo
+package com.devdroid.kikinbo.view
 
 import android.os.Bundle
 import android.widget.TextView
@@ -7,54 +7,113 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.devdroid.kikinbo.model.ProductDataModel
+import com.devdroid.kikinbo.ProductDisplayHelper
+import com.devdroid.kikinbo.R
 import com.devdroid.kikinbo.viewmodel.ProductViewModel
 
+/**
+ * Activity to display detailed information about a selected product.
+ * Retrieves product data from the `ProductViewModel` and displays it using `ProductDisplayHelper`.
+ * Handles insets to ensure proper padding for system UI elements.
+ */
 class ViewProduct : AppCompatActivity() {
+
+    // ViewModel to handle product data retrieval
     private lateinit var productViewModel: ProductViewModel
+
+    // TextView references for product details
+    private lateinit var productNameId: TextView
     private lateinit var productPriceId: TextView
     private lateinit var productRatingId: TextView
-    private lateinit var productNameId: TextView
-    private lateinit var productCatagoryId: TextView
+    private lateinit var productCategoryId: TextView
     private lateinit var productDetailsId: TextView
-    private lateinit var productIdToFetch: String
+
+    // Helper class to display product information
     private lateinit var productDisplayHelper: ProductDisplayHelper
 
+    // Product ID passed through intent to fetch data
+    private lateinit var productIdToFetch: String
+
+    /**
+     * Initializes the activity, sets up UI elements, and handles intent data.
+     * Applies system UI padding and retrieves product data based on the product ID.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        enableEdgeToEdge()  // Enable immersive mode for the activity
         setContentView(R.layout.activity_view_product)
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+        applyWindowInsets()  // Handle system insets for proper padding
 
+        // Initialize ViewModel and Helper
         productViewModel = ProductViewModel()
-        productDisplayHelper = ProductDisplayHelper()  // Initialize ProductDisplayHelper
+        productDisplayHelper = ProductDisplayHelper()
 
+        // Retrieve the product ID from intent extras
         productIdToFetch = intent.getStringExtra("productId") ?: ""
 
+        // Bind UI elements to their corresponding views
+        bindViews()
+
+        // Fetch and display product data
+        if (productIdToFetch.isNotEmpty()) {
+            fetchAndDisplayProduct()
+        } else {
+            showToast("Product ID not found")
+        }
+    }
+
+    /**
+     * Applies system window insets to adjust padding dynamically for UI elements.
+     */
+    private fun applyWindowInsets() {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { view, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            view.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
+    }
+
+    /**
+     * Binds TextView elements from the layout to the corresponding variables.
+     */
+    private fun bindViews() {
         productNameId = findViewById(R.id.productnameid)
         productPriceId = findViewById(R.id.productPriceid)
         productRatingId = findViewById(R.id.ProductRatingid)
-        productCatagoryId = findViewById(R.id.tvProductCatagoryid)
+        productCategoryId = findViewById(R.id.tvProductCatagoryid)
         productDetailsId = findViewById(R.id.productDetailsid)
+    }
 
-        if (productIdToFetch.isNotEmpty()) {
-            productViewModel.fetchProductData(productIdToFetch) { product ->
-                if (product != null) {
-                    productDisplayHelper.displayProductDetails(product, productNameId, productPriceId, productRatingId, productCatagoryId, productDetailsId)
-                } else {
-                    Toast.makeText(this, "Product not found", Toast.LENGTH_SHORT).show()
-                }
+    /**
+     * Fetches product data from the ViewModel and displays it using the helper class.
+     */
+    private fun fetchAndDisplayProduct() {
+        productViewModel.fetchProductData(productIdToFetch) { product ->
+            if (product != null) {
+                productDisplayHelper.displayProductDetails(
+                    product,
+                    productNameId,
+                    productPriceId,
+                    productRatingId,
+                    productCategoryId,
+                    productDetailsId
+                )
+            } else {
+                showToast("Product not found")
             }
-        } else {
-            Toast.makeText(this, "Product ID not found", Toast.LENGTH_SHORT).show()
         }
     }
+
+    /**
+     * Displays a short Toast message.
+     * @param message The message to be shown in the Toast.
+     */
+    private fun showToast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
 }
+
 
 //package com.devdroid.kikinbo
 //

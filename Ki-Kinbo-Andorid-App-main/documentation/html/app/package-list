@@ -1,0 +1,34 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.devdroid.kikinbo.model////PointingToDeclaration/app/com.devdroid.kikinbo.model/index.html
+$dokka.location:com.devdroid.kikinbo.model/ProductDataModel///PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-data-model/index.html
+$dokka.location:com.devdroid.kikinbo.model/ProductDataModel/ProductDataModel/#kotlin.String?#kotlin.String?#kotlin.Int?#kotlin.Double?#kotlin.String?#kotlin.String?#kotlin.String?/PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-data-model/-product-data-model.html
+$dokka.location:com.devdroid.kikinbo.model/ProductDataModel/productCategory/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-data-model/product-category.html
+$dokka.location:com.devdroid.kikinbo.model/ProductDataModel/productDetail/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-data-model/product-detail.html
+$dokka.location:com.devdroid.kikinbo.model/ProductDataModel/productId/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-data-model/product-id.html
+$dokka.location:com.devdroid.kikinbo.model/ProductDataModel/productName/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-data-model/product-name.html
+$dokka.location:com.devdroid.kikinbo.model/ProductDataModel/productPrice/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-data-model/product-price.html
+$dokka.location:com.devdroid.kikinbo.model/ProductDataModel/productRating/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-data-model/product-rating.html
+$dokka.location:com.devdroid.kikinbo.model/ProductDataModel/productReview/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-data-model/product-review.html
+$dokka.location:com.devdroid.kikinbo.view////PointingToDeclaration/app/com.devdroid.kikinbo.view/index.html
+$dokka.location:com.devdroid.kikinbo.view/MainActivity///PointingToDeclaration/app/com.devdroid.kikinbo.view/-main-activity/index.html
+$dokka.location:com.devdroid.kikinbo.view/MainActivity/MainActivity/#/PointingToDeclaration/app/com.devdroid.kikinbo.view/-main-activity/-main-activity.html
+$dokka.location:com.devdroid.kikinbo.view/MainActivity/database/#/PointingToDeclaration/app/com.devdroid.kikinbo.view/-main-activity/database.html
+$dokka.location:com.devdroid.kikinbo.view/MainActivity/databaseRef/#/PointingToDeclaration/app/com.devdroid.kikinbo.view/-main-activity/database-ref.html
+$dokka.location:com.devdroid.kikinbo.view/ViewProduct///PointingToDeclaration/app/com.devdroid.kikinbo.view/-view-product/index.html
+$dokka.location:com.devdroid.kikinbo.view/ViewProduct/ViewProduct/#/PointingToDeclaration/app/com.devdroid.kikinbo.view/-view-product/-view-product.html
+$dokka.location:com.devdroid.kikinbo.viewmodel////PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/index.html
+$dokka.location:com.devdroid.kikinbo.viewmodel/ProductViewModel///PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-product-view-model/index.html
+$dokka.location:com.devdroid.kikinbo.viewmodel/ProductViewModel/ProductViewModel/#/PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-product-view-model/-product-view-model.html
+$dokka.location:com.devdroid.kikinbo.viewmodel/ProductViewModel/fetchProductData/#kotlin.String#kotlin.Function1[com.devdroid.kikinbo.model.ProductDataModel?,kotlin.Unit]/PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-product-view-model/fetch-product-data.html
+$dokka.location:com.devdroid.kikinbo////PointingToDeclaration/app/com.devdroid.kikinbo/index.html
+$dokka.location:com.devdroid.kikinbo/ProductDisplayHelper///PointingToDeclaration/app/com.devdroid.kikinbo/-product-display-helper/index.html
+$dokka.location:com.devdroid.kikinbo/ProductDisplayHelper/ProductDisplayHelper/#/PointingToDeclaration/app/com.devdroid.kikinbo/-product-display-helper/-product-display-helper.html
+$dokka.location:com.devdroid.kikinbo/ProductDisplayHelper/displayProductDetails/#com.devdroid.kikinbo.model.ProductDataModel#android.widget.TextView#android.widget.TextView#android.widget.TextView#android.widget.TextView#android.widget.TextView/PointingToDeclaration/app/com.devdroid.kikinbo/-product-display-helper/display-product-details.html
+$dokka.location:com.devdroid.kikinbo/SearchProduct///PointingToDeclaration/app/com.devdroid.kikinbo/-search-product/index.html
+$dokka.location:com.devdroid.kikinbo/SearchProduct/SearchProduct/#/PointingToDeclaration/app/com.devdroid.kikinbo/-search-product/-search-product.html
+com.devdroid.kikinbo
+com.devdroid.kikinbo.model
+com.devdroid.kikinbo.view
+com.devdroid.kikinbo.viewmodel
+
