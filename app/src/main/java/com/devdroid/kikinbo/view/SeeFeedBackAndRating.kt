@@ -1,4 +1,4 @@
-package com.devdroid.kikinbo
+package com.devdroid.kikinbo.view
 
 import android.os.Bundle
 import android.view.ViewGroup
@@ -7,6 +7,8 @@ import android.widget.RatingBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.devdroid.kikinbo.R
+import com.devdroid.kikinbo.model.ProductDataModel
 import com.google.firebase.database.*
 
 class SeeFeedBackAndRating : AppCompatActivity() {
@@ -33,7 +35,7 @@ class SeeFeedBackAndRating : AppCompatActivity() {
     }
 
     private fun fetchProductData() {
-        val productId = "Headphoneid" // Replace with the dynamic product ID as needed
+        val productId = "Mouseid"
 
         database.orderByChild("productId").equalTo(productId)
             .addListenerForSingleValueEvent(object : ValueEventListener {
