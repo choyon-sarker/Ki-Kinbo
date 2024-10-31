@@ -17,7 +17,7 @@
             android:name=".ViewProduct"
             android:exported="false" />
         <activity
-            android:name=".SeeFeedBackandRating"
+            android:name=".SeeFeedBackAndRating"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -9,7 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.*
 
-class SeeFeedBackandRating : AppCompatActivity() {
+class SeeFeedBackAndRating : AppCompatActivity() {
 
     private lateinit var database: DatabaseReference
     private lateinit var productNameTextView: TextView
@@ -54,7 +54,7 @@ class SeeFeedBackandRating : AppCompatActivity() {
                             // Display each review dynamically
                             it.reviews?.forEach { review ->
                                 // Create TextView for review text
-                                val reviewTextView = TextView(this@SeeFeedBackandRating).apply {
+                                val reviewTextView = TextView(this@SeeFeedBackAndRating).apply {
                                     text = review.productIdReview ?: "No review"
                                     textSize = 14f
                                     layoutParams = ViewGroup.LayoutParams(
@@ -64,7 +64,7 @@ class SeeFeedBackandRating : AppCompatActivity() {
                                 }
 
                                 // Create RatingBar for review rating
-                                val reviewRatingBar = RatingBar(this@SeeFeedBackandRating, null, android.R.attr.ratingBarStyleSmall).apply {
+                                val reviewRatingBar = RatingBar(this@SeeFeedBackAndRating, null, android.R.attr.ratingBarStyleSmall).apply {
                                     numStars = 5
                                     stepSize = 0.5f
                                     rating = review.productRating?.toFloat() ?: 0f
@@ -82,12 +82,12 @@ class SeeFeedBackandRating : AppCompatActivity() {
                             }
                         }
                     } else {
-                        Toast.makeText(this@SeeFeedBackandRating, "Product not found", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@SeeFeedBackAndRating, "Product not found", Toast.LENGTH_SHORT).show()
                     }
                 }
 
                 override fun onCancelled(error: DatabaseError) {
-                    Toast.makeText(this@SeeFeedBackandRating, "Failed to fetch data: ${error.message}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@SeeFeedBackAndRating, "Failed to fetch data: ${error.message}", Toast.LENGTH_SHORT).show()
                 }
             })
     }
