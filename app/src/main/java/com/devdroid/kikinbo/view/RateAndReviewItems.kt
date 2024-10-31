@@ -8,8 +8,6 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.devdroid.kikinbo.R
-import com.devdroid.kikinbo.model.ProductDataModel
-import com.devdroid.kikinbo.model.Review
 import com.devdroid.kikinbo.viewmodel.ProductViewModel
 
 class RateAndReviewItems : AppCompatActivity() { // Make sure class name is consistent with usage
