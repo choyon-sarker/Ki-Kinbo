@@ -36,6 +36,7 @@ android {
         jvmTarget = "1.8"
     }
 }
+tasks.dokkaHtml.configure { outputDirectory.set(file("../documentation/html")) }
 
 dependencies {
 
