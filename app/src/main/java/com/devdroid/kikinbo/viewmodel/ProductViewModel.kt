@@ -5,14 +5,21 @@ import com.devdroid.kikinbo.model.ProductDataModel
 import com.devdroid.kikinbo.model.Review
 import com.google.firebase.database.*
 
-// ViewModel responsible for interacting with the Firebase Realtime Database
+/**
+ * ViewModel responsible for interacting with the Firebase Realtime Database to manage product data and reviews.
+ */
 class ProductViewModel : ViewModel() {
 
     // Firebase Database reference pointing to the "Products" node
     private val databaseRef: DatabaseReference =
         FirebaseDatabase.getInstance().getReference("Products")
 
-    // Fetch product data from Firebase based on the given product ID
+    /**
+     * Fetches product data from Firebase based on the given product ID.
+     *
+     * @param productId The ID of the product to fetch.
+     * @param callback A callback that returns the fetched product or null if not found.
+     */
     fun fetchProductData(productId: String, callback: (ProductDataModel?) -> Unit) {
         databaseRef.orderByChild("productId").equalTo(productId)
             .addListenerForSingleValueEvent(object : ValueEventListener {
@@ -34,7 +41,14 @@ class ProductViewModel : ViewModel() {
             })
     }
 
-    // Add a review to the specified product
+    /**
+     * Adds a review to the specified product.
+     *
+     * @param productId The ID of the product to which the review will be added.
+     * @param rating The rating given to the product.
+     * @param reviewText The text of the review.
+     * @param callback A callback that returns true if the review was added successfully, false otherwise.
+     */
     fun addReviewToProduct(productId: String, rating: Float, reviewText: String, callback: (Boolean) -> Unit) {
         val newReview = Review().apply {
             productRating = rating.toString()

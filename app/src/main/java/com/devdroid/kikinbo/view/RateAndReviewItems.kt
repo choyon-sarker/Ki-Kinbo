@@ -10,6 +10,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.devdroid.kikinbo.R
 import com.devdroid.kikinbo.viewmodel.ProductViewModel
 
+/**
+ * Activity for rating and reviewing a product.
+ */
 class RateAndReviewItems : AppCompatActivity() { // Make sure class name is consistent with usage
 
     private val productViewModel: ProductViewModel by viewModels()
