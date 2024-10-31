@@ -11,6 +11,12 @@ import com.devdroid.kikinbo.R
 import com.devdroid.kikinbo.model.ProductDataModel
 import com.google.firebase.database.*
 
+/**
+ * Activity to display product feedback and ratings.
+ *
+ * This activity fetches product data from Firebase Realtime Database and displays
+ * the product name, average rating, and individual reviews.
+ */
 class SeeFeedBackAndRating : AppCompatActivity() {
 
     private lateinit var database: DatabaseReference
@@ -18,6 +24,12 @@ class SeeFeedBackAndRating : AppCompatActivity() {
     private lateinit var productRatingBar: RatingBar
     private lateinit var reviewsContainer: LinearLayout
 
+    /**
+     * Called when the activity is created. Initializes views and fetches product data.
+     *
+     * @param savedInstanceState If the activity is being re-initialized after previously being shut down,
+     * this Bundle contains the data it most recently supplied in [onSaveInstanceState]. Otherwise, it is null.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_see_feed_backand_rating)
@@ -34,6 +46,12 @@ class SeeFeedBackAndRating : AppCompatActivity() {
         fetchProductData()
     }
 
+    /**
+     * Fetches product data from Firebase based on the product ID.
+     *
+     * This function retrieves product information, including reviews and ratings,
+     * and updates the UI accordingly. If the product is not found, a toast message is displayed.
+     */
     private fun fetchProductData() {
         val productId = "Mouseid"
 
@@ -76,7 +94,6 @@ class SeeFeedBackAndRating : AppCompatActivity() {
                                     )
                                     setIsIndicator(true)  // Make it read-only
                                 }
-
 
                                 // Add review elements to container
                                 reviewsContainer.addView(reviewTextView)

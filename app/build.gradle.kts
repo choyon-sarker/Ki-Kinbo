@@ -15,7 +15,6 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -28,18 +27,29 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    packagingOptions {
+        resources {
+            excludes += listOf("META-INF/LICENSE.md", "META-INF/NOTICE.md")
+        }
+    }
 }
-tasks.dokkaHtml.configure { outputDirectory.set(file("../documentation/html")) }
+
+// Configure Dokka output directory
+tasks.dokkaHtml.configure {
+    outputDirectory.set(file("../documentation/html"))
+}
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -50,5 +60,5 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation(libs.dokka.gradle.plugin)
+    // Removed: implementation(libs.dokka.gradle.plugin)
 }
