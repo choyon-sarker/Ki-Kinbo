@@ -1,7 +1,11 @@
 package com.devdroid.kikinbo.viewmodel
 
 import com.devdroid.kikinbo.model.ProductDataModel
-import com.google.firebase.database.*
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 /**
  * ViewModel responsible for interacting with the Firebase Realtime Database

@@ -60,5 +60,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    // Removed: implementation(libs.dokka.gradle.plugin)
+
+    // ViewModel and LiveData
+
 }
+
