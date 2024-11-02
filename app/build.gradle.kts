@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.google.gms.google.services)
+    id("org.jetbrains.dokka") version "1.9.20"
 }
 
 android {
@@ -36,9 +37,14 @@ android {
     }
 }
 
+tasks.dokkaHtml.configure {
+    outputDirectory.set(file("../documentation/html"))
+}
+
 dependencies {
 
     implementation(libs.androidx.core.ktx)
+    implementation("org.jetbrains.dokka:dokka-gradle-plugin:1.9.20")
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)

@@ -1,0 +1,24 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.devdroid.kikinbo////PointingToDeclaration/app/com.devdroid.kikinbo/index.html
+$dokka.location:com.devdroid.kikinbo/AddToCart///PointingToDeclaration/app/com.devdroid.kikinbo/-add-to-cart/index.html
+$dokka.location:com.devdroid.kikinbo/AddToCart/AddToCart/#/PointingToDeclaration/app/com.devdroid.kikinbo/-add-to-cart/-add-to-cart.html
+$dokka.location:com.devdroid.kikinbo/MainActivity///PointingToDeclaration/app/com.devdroid.kikinbo/-main-activity/index.html
+$dokka.location:com.devdroid.kikinbo/MainActivity/MainActivity/#/PointingToDeclaration/app/com.devdroid.kikinbo/-main-activity/-main-activity.html
+$dokka.location:com.devdroid.kikinbo/MainActivity/database/#/PointingToDeclaration/app/com.devdroid.kikinbo/-main-activity/database.html
+$dokka.location:com.devdroid.kikinbo/MainActivity/databaseRef/#/PointingToDeclaration/app/com.devdroid.kikinbo/-main-activity/database-ref.html
+$dokka.location:com.devdroid.kikinbo/ProductDataModel///PointingToDeclaration/app/com.devdroid.kikinbo/-product-data-model/index.html
+$dokka.location:com.devdroid.kikinbo/ProductDataModel/ProductDataModel/#kotlin.String?#kotlin.String?#kotlin.Int?#kotlin.Double?#kotlin.String?#kotlin.String?#kotlin.String?/PointingToDeclaration/app/com.devdroid.kikinbo/-product-data-model/-product-data-model.html
+$dokka.location:com.devdroid.kikinbo/ProductDataModel/productCategory/#/PointingToDeclaration/app/com.devdroid.kikinbo/-product-data-model/product-category.html
+$dokka.location:com.devdroid.kikinbo/ProductDataModel/productDetail/#/PointingToDeclaration/app/com.devdroid.kikinbo/-product-data-model/product-detail.html
+$dokka.location:com.devdroid.kikinbo/ProductDataModel/productId/#/PointingToDeclaration/app/com.devdroid.kikinbo/-product-data-model/product-id.html
+$dokka.location:com.devdroid.kikinbo/ProductDataModel/productName/#/PointingToDeclaration/app/com.devdroid.kikinbo/-product-data-model/product-name.html
+$dokka.location:com.devdroid.kikinbo/ProductDataModel/productPrice/#/PointingToDeclaration/app/com.devdroid.kikinbo/-product-data-model/product-price.html
+$dokka.location:com.devdroid.kikinbo/ProductDataModel/productRating/#/PointingToDeclaration/app/com.devdroid.kikinbo/-product-data-model/product-rating.html
+$dokka.location:com.devdroid.kikinbo/ProductDataModel/productReview/#/PointingToDeclaration/app/com.devdroid.kikinbo/-product-data-model/product-review.html
+$dokka.location:com.devdroid.kikinbo/SearchProduct///PointingToDeclaration/app/com.devdroid.kikinbo/-search-product/index.html
+$dokka.location:com.devdroid.kikinbo/SearchProduct/SearchProduct/#/PointingToDeclaration/app/com.devdroid.kikinbo/-search-product/-search-product.html
+$dokka.location:com.devdroid.kikinbo/ViewProduct///PointingToDeclaration/app/com.devdroid.kikinbo/-view-product/index.html
+$dokka.location:com.devdroid.kikinbo/ViewProduct/ViewProduct/#/PointingToDeclaration/app/com.devdroid.kikinbo/-view-product/-view-product.html
+com.devdroid.kikinbo
+

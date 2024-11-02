@@ -1,10 +1,11 @@
-package com.devdroid.kikinbo
+package ViewModel
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.devdroid.kikinbo.R
 
 class ViewProduct : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

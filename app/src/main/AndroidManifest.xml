@@ -13,15 +13,15 @@
         tools:targetApi="31">
 
         <activity
-            android:name=".SearchProduct"
+            android:name="ViewModel.SearchProduct"
             android:exported="false" />
 
         <activity
-            android:name=".ViewProduct"
+            android:name="ViewModel.ViewProduct"
             android:exported="false" />
 
         <activity
-            android:name=".AddToCart"
+            android:name="ViewModel.AddToCart"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
