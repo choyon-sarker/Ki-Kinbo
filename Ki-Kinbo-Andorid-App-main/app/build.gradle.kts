@@ -3,7 +3,6 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.google.gms.google.services)
     id("org.jetbrains.dokka") version "1.9.0"
-
 }
 
 android {
@@ -19,9 +18,9 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
+
     packaging {
         resources {
-            // Exclude conflicting files
             excludes += "META-INF/NOTICE.md"
             excludes += "META-INF/LICENSE.md" // Optional, if similar conflicts occur
         }
@@ -36,18 +35,20 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = "1.8"
     }
 }
+
 tasks.dokkaHtml.configure { outputDirectory.set(file("../documentation/html")) }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -55,8 +56,19 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.firebase.auth)
     implementation(libs.firebase.database)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    implementation("org.jetbrains.dokka:dokka-core:1.9.0")
+
+    // JUnit 5 dependencies
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.2")
+    testImplementation(libs.testng)
+    testImplementation(libs.junit.jupiter)
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.2")
+
+    // Mockito dependencies for JUnit 5
+    testImplementation("org.mockito:mockito-core:4.0.0")
+    testImplementation("org.mockito:mockito-inline:4.0.0")
+    testImplementation("org.mockito.kotlin:mockito-kotlin:4.0.0") // Mockito-Kotlin for cleaner syntax
+
+    // AndroidX Test libraries
+    //androidTestImplementation(libs.androidx.test.ext.junit) // For AndroidX JUnit extensions
+    //androidTestImplementation(libs.androidx.test.espresso.espressoCore) // For Espresso tests
 }
