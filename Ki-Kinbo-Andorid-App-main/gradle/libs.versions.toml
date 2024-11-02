@@ -16,6 +16,7 @@ junitJupiter = "5.8.1"
 junitJunit = "4.12"
 junitKtx = "1.2.1"
 testng = "6.9.6"
+monitor = "1.7.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -32,6 +33,7 @@ junit-jupiter = { group = "org.junit.jupiter", name = "junit-jupiter", version.r
 junit-junit = { group = "junit", name = "junit", version.ref = "junitJunit" }
 androidx-junit-ktx = { group = "androidx.test.ext", name = "junit-ktx", version.ref = "junitKtx" }
 testng = { group = "org.testng", name = "testng", version.ref = "testng" }
+androidx-monitor = { group = "androidx.test", name = "monitor", version.ref = "monitor" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

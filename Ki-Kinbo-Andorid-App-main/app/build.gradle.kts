@@ -44,6 +44,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    tasks.withType<Test> {
+        useJUnitPlatform()
+    }
 }
 
 tasks.dokkaHtml.configure { outputDirectory.set(file("../documentation/html")) }
@@ -56,17 +59,23 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.firebase.auth)
     implementation(libs.firebase.database)
+    implementation(libs.androidx.monitor)
+    implementation(libs.androidx.junit.ktx)
 
-    // JUnit 5 dependencies
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.2")
-    testImplementation(libs.testng)
-    testImplementation(libs.junit.jupiter)
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.2")
+    // JUnit
+    testImplementation("org.junit.jupiter:junit-jupiter:5.8.2")
 
-    // Mockito dependencies for JUnit 5
+    // Core testing library for Android, including InstantTaskExecutorRule
+    testImplementation("androidx.arch.core:core-testing:2.1.0")
+
+    // Mockito for Kotlin
     testImplementation("org.mockito:mockito-core:4.0.0")
-    testImplementation("org.mockito:mockito-inline:4.0.0")
-    testImplementation("org.mockito.kotlin:mockito-kotlin:4.0.0") // Mockito-Kotlin for cleaner syntax
+    testImplementation("org.mockito.kotlin:mockito-kotlin:4.0.0")
+    testImplementation(libs.junit.junit)
+    testImplementation(libs.junit.jupiter)
+    testImplementation(libs.junit.jupiter)
+    testImplementation(libs.junit.jupiter)
+    testImplementation(libs.junit.jupiter)
 
     // AndroidX Test libraries
     //androidTestImplementation(libs.androidx.test.ext.junit) // For AndroidX JUnit extensions

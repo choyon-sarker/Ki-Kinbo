@@ -16,7 +16,7 @@
             android:name=".SearchProduct"
             android:exported="false" />
         <activity
-            android:name=".ViewProduct"
+            android:name=".view.ViewProduct"
             android:exported="false" />
         <activity
             android:name=".view.MainActivity"

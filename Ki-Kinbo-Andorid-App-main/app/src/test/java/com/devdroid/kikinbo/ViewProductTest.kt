@@ -1,5 +1,5 @@
 //import android.widget.TextView
-//import com.devdroid.kikinbo.ViewProduct
+//import com.devdroid.kikinbo.view.ViewProduct
 //import com.devdroid.kikinbo.model.ProductDataModel
 //import org.junit.jupiter.api.Assertions.assertEquals
 //import org.junit.jupiter.api.BeforeEach

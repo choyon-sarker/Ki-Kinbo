@@ -1,6 +1,5 @@
 package com.devdroid.kikinbo.viewmodel
 
-import com.devdroid.kikinbo.ProductViewModelInterface
 import com.devdroid.kikinbo.model.ProductDataModel
 
 class ProductViewModel : ProductViewModelInterface {
