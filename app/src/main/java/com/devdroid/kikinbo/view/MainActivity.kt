@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
             if (event.action == MotionEvent.ACTION_UP) {
                 val i = Intent(this, SearchProductView::class.java)
                 startActivity(i)
-                return@setOnTouchListener true // Consumed the event
+//                return@setOnTouchListener true // Consumed the event
             }
             false
         }

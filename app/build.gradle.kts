@@ -18,6 +18,13 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
+    packaging {
+        resources {
+            // Exclude one of the NOTICE.md files to avoid conflict
+            excludes += "META-INF/NOTICE.md"
+            excludes += "META-INF/LICENSE.md" // Optional if there are other similar conflicts
+        }
+    }
 
     buildTypes {
         release {
@@ -35,9 +42,16 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    testOptions {
+        unitTests.all {
+        }
+    }
 }
 tasks.dokkaHtml {
     outputDirectory.set(buildDir.resolve("dokka"))
+}
+tasks.withType<Test> {
+    useJUnitPlatform()
 }
 
 
@@ -51,8 +65,27 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.firebase.auth)
     implementation(libs.firebase.database)
-    testImplementation(libs.junit)
+
+    // JUnit 4 for unit tests
+    //testImplementation("junit:junit:4.13.2")
+
+    // Robolectric for Android unit testing
+    testImplementation("org.robolectric:robolectric:4.9.1")
+    testImplementation(libs.junit.jupiter)
+    testImplementation(libs.testng) // Check for the latest version
+
+    // Android test dependencies
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // Dokka
     implementation("org.jetbrains.dokka:dokka-core:1.7.10")
+    // JUnit 5
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.0")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.10.0")
+
+    // Optional: AssertJ for fluent assertions (optional but helpful)
+    testImplementation("org.assertj:assertj-core:3.24.2")
+
+
 }
