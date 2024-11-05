@@ -1,11 +1,11 @@
-package ViewModel
+package com.devdroid.kikinbo.ViewModel
 
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import Model.ProductDataModel
+import com.devdroid.kikinbo.Model.ProductDataModel
 import com.devdroid.kikinbo.R
 import com.google.firebase.database.*
 
@@ -17,14 +17,14 @@ import com.google.firebase.database.*
 class AddToCart : AppCompatActivity() {
 
     // Firebase Database reference used for accessing product data
-    private lateinit var database: DatabaseReference
+    private lateinit var databaseReference: DatabaseReference
 
     // UI elements for displaying product name, price, and quantity controls
-    private lateinit var tvProductName: TextView
-    private lateinit var tvProductPrice: TextView
-    private lateinit var btnIncrease: Button
-    private lateinit var btnDecrease: Button
-    private lateinit var btnProceedToCheckout: Button
+    private lateinit var productNameTextView: TextView
+    private lateinit var productPriceTextView: TextView
+    private lateinit var increaseButton: Button
+    private lateinit var decreaseButton: Button
+    private lateinit var proceedToCheckoutButton: Button
 
     // Tracks the selected quantity of the product
     private var quantity: Int = 0
@@ -43,25 +43,25 @@ class AddToCart : AppCompatActivity() {
         setContentView(R.layout.activity_add_to_cart)
 
         // Set up Firebase Database reference pointing to "Products" node
-        database = FirebaseDatabase.getInstance().getReference("Products")
+        databaseReference = FirebaseDatabase.getInstance().getReference("Products")
 
         // Initialize UI elements for product name, price, and control buttons
-        tvProductName = findViewById(R.id.tvProductName)
-        tvProductPrice = findViewById(R.id.tvProductPrice)
-        btnIncrease = findViewById(R.id.btnIncrease)
-        btnDecrease = findViewById(R.id.btnDecrease)
-        btnProceedToCheckout = findViewById(R.id.btnProceedToCheckout)
+        productNameTextView = findViewById(R.id.tvProductName)
+        productPriceTextView = findViewById(R.id.tvProductPrice)
+        increaseButton = findViewById(R.id.btnIncrease)
+        decreaseButton = findViewById(R.id.btnDecrease)
+        proceedToCheckoutButton = findViewById(R.id.btnProceedToCheckout)
 
         // Fetch and display product data from Firebase
         fetchProductData()
 
         // Set click listeners for increasing and decreasing product quantity
-        btnIncrease.setOnClickListener {
+        increaseButton.setOnClickListener {
             quantity++
             updateTotalAmount()
         }
 
-        btnDecrease.setOnClickListener {
+        decreaseButton.setOnClickListener {
             if (quantity > 0) {
                 quantity--
                 updateTotalAmount()
@@ -69,7 +69,7 @@ class AddToCart : AppCompatActivity() {
         }
 
         // Listener for proceeding to the checkout screen
-        btnProceedToCheckout.setOnClickListener {
+        proceedToCheckoutButton.setOnClickListener {
             Toast.makeText(this, "Proceeding to Checkout", Toast.LENGTH_SHORT).show()
         }
     }
@@ -83,7 +83,7 @@ class AddToCart : AppCompatActivity() {
         val productName = "Headphone" // Product name to search for in Firebase
 
         // Query Firebase database for a product matching the specified name
-        database.orderByChild("productName").equalTo(productName)
+        databaseReference.orderByChild("productName").equalTo(productName)
             .addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
                     // Check if product data exists
@@ -94,7 +94,7 @@ class AddToCart : AppCompatActivity() {
                         // Set the product price and display it, or show an error if null
                         if (product != null) {
                             productPrice = product.productPrice ?: 0
-                            tvProductPrice.text = "Price: $$productPrice"
+                            productPriceTextView.text = "Price: $$productPrice"
                             updateTotalAmount()
                         } else {
                             Toast.makeText(this@AddToCart, "Product data is null!", Toast.LENGTH_SHORT).show()

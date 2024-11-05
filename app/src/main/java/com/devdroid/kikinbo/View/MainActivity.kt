@@ -1,4 +1,4 @@
-package ViewModel
+package com.devdroid.kikinbo.View
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

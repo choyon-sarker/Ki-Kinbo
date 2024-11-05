@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stock Level Tracker"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:paddingBottom="16dp" />
+
+    <TextView
+        android:id="@+id/product_NameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Product Name:" />
+
+    <EditText
+        android:id="@+id/product_Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter product name"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/stock_LevelLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stock Level:" />
+
+    <EditText
+        android:id="@+id/stock_Level"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter available stock"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/threshold_Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restock Threshold:" />
+
+    <EditText
+        android:id="@+id/restock_Threshold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter restock threshold"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/setStock_Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Set Stock Level"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/alert_Message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0000"
+        android:visibility="gone"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>
