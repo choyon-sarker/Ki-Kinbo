@@ -1,0 +1,30 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.devdroid.kikinbo.model////PointingToDeclaration/app/com.devdroid.kikinbo.model/index.html
+$dokka.location:com.devdroid.kikinbo.model/ProductDataModel///PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-data-model/index.html
+$dokka.location:com.devdroid.kikinbo.model/ProductDataModel/ProductDataModel/#kotlin.String?#kotlin.String?#kotlin.Int?#kotlin.String?#kotlin.String?#kotlin.collections.MutableList[com.devdroid.kikinbo.model.Review]?/PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-data-model/-product-data-model.html
+$dokka.location:com.devdroid.kikinbo.model/ProductDataModel/productCategory/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-data-model/product-category.html
+$dokka.location:com.devdroid.kikinbo.model/ProductDataModel/productDetail/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-data-model/product-detail.html
+$dokka.location:com.devdroid.kikinbo.model/ProductDataModel/productId/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-data-model/product-id.html
+$dokka.location:com.devdroid.kikinbo.model/ProductDataModel/productName/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-data-model/product-name.html
+$dokka.location:com.devdroid.kikinbo.model/ProductDataModel/productPrice/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-data-model/product-price.html
+$dokka.location:com.devdroid.kikinbo.model/ProductDataModel/reviews/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-data-model/reviews.html
+$dokka.location:com.devdroid.kikinbo.model/Review///PointingToDeclaration/app/com.devdroid.kikinbo.model/-review/index.html
+$dokka.location:com.devdroid.kikinbo.model/Review/Review/#kotlin.String?#kotlin.String?/PointingToDeclaration/app/com.devdroid.kikinbo.model/-review/-review.html
+$dokka.location:com.devdroid.kikinbo.model/Review/productIdReview/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-review/product-id-review.html
+$dokka.location:com.devdroid.kikinbo.model/Review/productRating/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-review/product-rating.html
+$dokka.location:com.devdroid.kikinbo.view////PointingToDeclaration/app/com.devdroid.kikinbo.view/index.html
+$dokka.location:com.devdroid.kikinbo.view/MainActivity///PointingToDeclaration/app/com.devdroid.kikinbo.view/-main-activity/index.html
+$dokka.location:com.devdroid.kikinbo.view/MainActivity/MainActivity/#/PointingToDeclaration/app/com.devdroid.kikinbo.view/-main-activity/-main-activity.html
+$dokka.location:com.devdroid.kikinbo.view/SeeFeedBackAndRating///PointingToDeclaration/app/com.devdroid.kikinbo.view/-see-feed-back-and-rating/index.html
+$dokka.location:com.devdroid.kikinbo.view/SeeFeedBackAndRating/SeeFeedBackAndRating/#/PointingToDeclaration/app/com.devdroid.kikinbo.view/-see-feed-back-and-rating/-see-feed-back-and-rating.html
+$dokka.location:com.devdroid.kikinbo.view/ViewProduct///PointingToDeclaration/app/com.devdroid.kikinbo.view/-view-product/index.html
+$dokka.location:com.devdroid.kikinbo.view/ViewProduct/ViewProduct/#/PointingToDeclaration/app/com.devdroid.kikinbo.view/-view-product/-view-product.html
+$dokka.location:com.devdroid.kikinbo.viewmodel////PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/index.html
+$dokka.location:com.devdroid.kikinbo.viewmodel/ProductViewModel///PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-product-view-model/index.html
+$dokka.location:com.devdroid.kikinbo.viewmodel/ProductViewModel/ProductViewModel/#/PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-product-view-model/-product-view-model.html
+$dokka.location:com.devdroid.kikinbo.viewmodel/ProductViewModel/fetchProductData/#kotlin.String#kotlin.Function1[com.devdroid.kikinbo.model.ProductDataModel?,kotlin.Unit]/PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-product-view-model/fetch-product-data.html
+com.devdroid.kikinbo.model
+com.devdroid.kikinbo.view
+com.devdroid.kikinbo.viewmodel
+

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Ki Kinbo</string>
+    <string-array name="payment_methods">
+        <item>Cash on Delivery</item>
+        <item>Bkash</item>
+        <item>Online Banking</item>
+    </string-array>
+</resources>
