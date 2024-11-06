@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "934633253017",
+    "project_id": "ki-kinbo-2c23c",
+    "storage_bucket": "ki-kinbo-2c23c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934633253017:android:0a03a2963c78c0f7a5f008",
+        "android_client_info": {
+          "package_name": "com.devdroid.kikinbo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDggscMWMk70_qMb9T9BjdwSWLxWBPc64c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
