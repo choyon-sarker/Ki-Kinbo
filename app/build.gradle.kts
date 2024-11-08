@@ -58,6 +58,7 @@ dependencies {
     implementation(libs.firebase.auth)
     implementation(libs.firebase.database)
     implementation(libs.core.ktx)
+    implementation(libs.junit.junit)
 
     // Unit Testing
     testImplementation(libs.junit) // JUnit dependency

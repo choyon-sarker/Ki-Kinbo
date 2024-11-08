@@ -13,13 +13,10 @@
         android:theme="@style/Theme.KiKinbo"
         tools:targetApi="31">
         <activity
-            android:name=".view.Pay_Bill"
-            android:exported="false" />
-        <activity
             android:name=".view.ViewProduct"
             android:exported="false" />
         <activity
-            android:name=".view.SeeFeedBackAndRating"
+            android:name=".view.Pay_Bill"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
