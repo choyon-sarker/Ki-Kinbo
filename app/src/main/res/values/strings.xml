@@ -3,6 +3,6 @@
     <string-array name="payment_methods">
         <item>Cash on Delivery</item>
         <item>Bkash</item>
-        <item>Online Banking</item>
+        <item>Credit/Debit Card</item>
     </string-array>
 </resources>

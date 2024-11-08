@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center_horizontal"
     android:padding="16dp">
 
     <!-- Title -->
@@ -14,10 +15,9 @@
         android:text="Pay Bill"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:layout_gravity="center_horizontal"
         android:paddingBottom="24dp"/>
 
-    <!-- Bill Amount Input -->
+    <!-- Bill Amount Display -->
     <TextView
         android:id="@+id/tvBillAmountLabel"
         android:layout_width="wrap_content"
@@ -25,13 +25,16 @@
         android:text="Your Bill is:"
         android:textSize="16sp"/>
 
-    <EditText
-        android:id="@+id/etBillAmount"
+    <TextView
+        android:id="@+id/tvBillAmount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:hint="e.g., 50.00"
-        android:padding="8dp"/>
+        android:text="50.00"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:padding="15dp"
+        android:background="#F0F0F0"
+        android:gravity="center"/>
 
     <!-- Payment Method Selection -->
     <TextView
@@ -42,21 +45,30 @@
         android:textSize="16sp"
         android:paddingTop="16dp"/>
 
-    <!-- Pay Button -->
     <Spinner
         android:id="@+id/spinnerPaymentMethod"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:entries="@array/payment_methods"
-        android:padding="8dp" />
+        android:padding="20dp"/>
 
+
+    <TextView
+        android:id="@+id/tvConfirmationMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please confirm the bill amount and payment method before proceeding."
+        android:textSize="14sp"
+        android:textColor="#757575"
+        android:paddingTop="20dp"
+        android:gravity="center"/>
+
+    <!-- Pay Button -->
     <Button
         android:id="@+id/btnPayBill"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pay"
+        android:text="Pay Your Bill"
         android:layout_marginTop="24dp"
         android:backgroundTint="#FF5722"
         android:textColor="#FFFFFF"/>
-
 </LinearLayout>
