@@ -16,7 +16,7 @@ class PayBillViewModelTest {
     }
 
     @Test
-    fun validatePaymentAmount_zeroAmount_returnsError() {
+    fun validatePaymentAmountZeroAmountReturnsError() {
         // Arrange: Define the test input (amount = 0)
         val amount = 0
 
@@ -28,7 +28,7 @@ class PayBillViewModelTest {
     }
 
     @Test
-    fun validatePaymentAmount_negativeAmount_returnsError() {
+    fun validatePaymentAmountNegativeAmountReturnsError() {
         // Arrange: Define the test input (amount = -100)
         val amount = -100
 
