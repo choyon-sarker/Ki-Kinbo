@@ -7,7 +7,7 @@ class PayBillViewModel {
         return amount > 0
     }
     fun validatePaymentMethod(paymentMethod: String): Boolean {
-        return true
+        return paymentMethod.isNotEmpty()
     }
 }
 
