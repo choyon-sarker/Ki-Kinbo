@@ -8,11 +8,12 @@ import org.junit.Test
 class PayBillViewModelTest {
 
     private lateinit var payBillViewModel: PayBillViewModel
+    private val viewModel = PayBillViewModel()
 
     @Before
     fun setUp() {
-        // Initialize ViewModel before each test
         payBillViewModel = PayBillViewModel()
+
     }
 
     @Test
@@ -38,4 +39,11 @@ class PayBillViewModelTest {
         // Assert: Check that the result indicates an error
         assertFalse("Payment amount should not be zero or negative", result)
     }
+    @Test
+    fun validatePaymentMethodEmptyMethodReturnsError() {
+        val paymentMethod = ""
+        val result = viewModel.validatePaymentMethod(paymentMethod)
+        assertFalse("Payment method should not be empty", result)
+    }
+
 }
