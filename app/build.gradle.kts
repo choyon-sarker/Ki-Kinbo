@@ -49,4 +49,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    testImplementation (libs.androidx.core.testing) // for InstantTaskExecutorRule
+    testImplementation (libs.junit) // JUnit for testing
+    testImplementation (libs.kotlinx.coroutines.test) // for coroutines testing
+    implementation (libs.androidx.lifecycle.viewmodel.ktx)
 }
