@@ -1,4 +1,4 @@
-package com.devdroid.kikinbo.view
+package com.devdroid.kikinbo.viewmodel
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -21,7 +21,7 @@ import com.google.firebase.database.DatabaseError
  * It interacts with [ProductRepository] to load product data from Firebase
  * and applies search criteria based on user input.
  */
-class SearchProductView : AppCompatActivity() {
+class SearchProduct : AppCompatActivity() {
 
     private lateinit var recyclerViewSearch: RecyclerView
     private lateinit var ti_productSearch: TextInputEditText
@@ -66,7 +66,7 @@ class SearchProductView : AppCompatActivity() {
             }
 
             override fun onError(error: DatabaseError) {
-                Toast.makeText(this@SearchProductView, "Failed to load products", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@SearchProduct, "Failed to load products", Toast.LENGTH_SHORT).show()
             }
         })
 

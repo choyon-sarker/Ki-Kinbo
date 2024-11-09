@@ -65,6 +65,9 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.firebase.auth)
     implementation(libs.firebase.database)
+    implementation(libs.androidx.recyclerview)
+    implementation(libs.firebase.firestore.ktx)
+//    implementation(libs.androidx.lifecycle.livedata.testing)
 
     // JUnit 4 for unit tests
     //testImplementation("junit:junit:4.13.2")
@@ -72,7 +75,10 @@ dependencies {
     // Robolectric for Android unit testing
     testImplementation("org.robolectric:robolectric:4.9.1")
     testImplementation(libs.junit.jupiter)
-    testImplementation(libs.testng) // Check for the latest version
+    testImplementation(libs.testng)
+    testImplementation(libs.junit.jupiter)
+    testImplementation(libs.junit.jupiter)
+    // Check for the latest version
 
     // Android test dependencies
     androidTestImplementation(libs.androidx.junit)
@@ -86,6 +92,24 @@ dependencies {
 
     // Optional: AssertJ for fluent assertions (optional but helpful)
     testImplementation("org.assertj:assertj-core:3.24.2")
+
+    // Android Testing libraries
+    // To test LiveData and ViewModel
+    testImplementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7")
+    //implementation("androidx.lifecycle:lifecycle-livedata-testing:2.6.1")
+
+
+    testImplementation("io.mockk:mockk:1.12.3") // For mocking in tests (mockk instead of Mockito)
+
+    // Optionally, add JUnit Platform for running tests
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher:1.10.0")
+
+    // For testing LiveData objects and ViewModel
+    testImplementation("androidx.arch.core:core-testing:2.2.0")
+    // Test for Kotlin coroutines (if your ViewModel uses coroutines)
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
+
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.9.24")
 
 
 }

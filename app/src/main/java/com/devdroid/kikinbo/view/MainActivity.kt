@@ -4,17 +4,22 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.MotionEvent
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.devdroid.kikinbo.R
+import com.devdroid.kikinbo.SelectItems
+import com.devdroid.kikinbo.viewmodel.SearchProduct
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.database.FirebaseDatabase
 
 /**
  * Main activity that serves as the entry point for the app.
  * Sets up UI elements and interactions, including Firebase database reference.
+ * @see [SearchProduct] for the activity triggered by searching products.
+ * @see [PlaceOrderView] for the activity triggered by the place order button.
  */
 class MainActivity : AppCompatActivity() {
 
@@ -50,14 +55,24 @@ class MainActivity : AppCompatActivity() {
         hometi1.setOnTouchListener { _, event ->
             if (event.action == MotionEvent.ACTION_UP) {
                 // Navigate to SearchProductView on touch
-                val i = Intent(this, SearchProductView::class.java)
+                val i = Intent(this, SearchProduct::class.java)
                 startActivity(i)
             }
             false
         }
 
+        // Set up the Place Order button to navigate to PlaceOrderView on click
+        val placeOrder: Button =findViewById(R.id.btnSelectItems)
+        placeOrder.setOnClickListener {
+            val i=Intent(this@MainActivity, SelectItems::class.java)
+            startActivity(i)
+        }
+
+
         // Code for pushing product data to Firebase can be uncommented and configured as needed
         // val pushProductData = PushProductData()
         // pushProductData.pushProductData()
+//        val pushUsers=PushUserData()
+//        pushUsers.fPushUserData()
     }
 }
