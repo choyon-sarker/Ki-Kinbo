@@ -4,18 +4,14 @@ class PayBillViewModel {
 
     private val maxPaymentLimit = 10000
     private val validPaymentMethods = listOf("Cash on delivery", "Bkash", "Credit/Debit Card")
-    fun validatePaymentAmount(amount: Int): Boolean {
-        if (amount <= 0) {
-            throw Exception("Payment submission failed due to network/server error.")  // Simulate network/server failure
-        }
-        return amount in 1..maxPaymentLimit
+    fun validatePaymentAmount(amount: Any): Boolean {
+        // Convert to Int if it's a string, otherwise check if it's an Int
+        val amountInt = (amount as? String)?.toIntOrNull()
+        return (amountInt ?: amount as? Int)?.let {
+            it in 1..maxPaymentLimit
+        } ?: false
     }
-
     fun validatePaymentMethod(paymentMethod: String): Boolean {
-        if (!validPaymentMethods.contains(paymentMethod)) {
-            throw Exception("Payment submission failed. Invalid payment method.")  // Simulate failure
-        }
-        return true
+        return paymentMethod.isNotEmpty() && validPaymentMethods.contains(paymentMethod)
     }
-
 }
