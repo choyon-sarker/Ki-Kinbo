@@ -45,5 +45,11 @@ class PayBillViewModelTest {
         val result = viewModel.validatePaymentMethod(paymentMethod)
         assertFalse("Payment method should not be empty", result)
     }
+    @Test
+    fun validatePaymentAmountExceedsLimitReturnsError() {
+        val paymentAmount = 15000 // Exceeds the maximum limit of 10,000
+        val result = viewModel.validatePaymentAmount(paymentAmount)
+        assertFalse("Payment amount should not exceed maximum allowed limit", result)
+    }
 
 }
