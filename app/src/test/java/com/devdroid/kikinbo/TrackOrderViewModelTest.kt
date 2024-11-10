@@ -57,6 +57,7 @@ class TrackOrderViewModelTest {
         viewModel.loadOrderStatus("ORDER123")
         assertEquals("Pending", viewModel.orderStatus.value)
         viewModel.resetOrderStatus()
-        assertNull(viewModel.orderStatus.value)
+        assertEquals("", viewModel.orderStatus.value)
+
     }
 }
