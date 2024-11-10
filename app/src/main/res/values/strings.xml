@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Ki Kinbo</string>
+    <string name="enter_product_name">Please enter a product name.</string>
+    <string name="enter_valid_numbers">Please enter valid numbers for stock level and threshold.</string>
+    <string name="stock_below_threshold">Alert: Stock for %1$s is below the threshold! Current stock: %2$d, Threshold: %3$d. Time to restock.</string>
+
 </resources>

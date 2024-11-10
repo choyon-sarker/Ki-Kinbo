@@ -1,3 +1,5 @@
+import com.android.build.api.dsl.Packaging
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -28,13 +30,31 @@ android {
             )
         }
     }
+
+    // Define the packaging function here
+    packaging {
+        resources {
+            excludes += listOf(
+                "META-INF/LICENSE-notice.md",
+                "META-INF/LICENSE.md",
+                "META-INF/NOTICE.md",
+                "META-INF/NOTICE.txt"
+            )
+        }
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = "1.8"
     }
+}
+
+tasks.withType<Test> {
+    useJUnitPlatform()
 }
 
 tasks.dokkaHtml.configure {
@@ -49,5 +69,17 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.firebase.auth)
     implementation(libs.firebase.database)
-    androidTestImplementation(libs.androidx.espresso.core)
+    implementation(libs.firebase.firestore.ktx)
+    implementation(libs.core.ktx)
+
+    // JUnit 5 dependencies for unit tests
+        testImplementation(libs.junit.jupiter.api)
+        testRuntimeOnly(libs.junit.jupiter.engine)
+
+        // Android JUnit dependencies for instrumented tests
+        androidTestImplementation(libs.junit.jupiter)
+
+        // Android test dependencies
+        androidTestImplementation(libs.androidx.espresso.core)
+
 }

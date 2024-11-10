@@ -1,4 +1,4 @@
-package com.devdroid.kikinbo.Model
+package com.devdroid.kikinbo.model
 
 data class ProductDataModel(
     val productId:String?=null,

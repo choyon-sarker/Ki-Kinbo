@@ -1,4 +1,4 @@
-package com.devdroid.kikinbo.View
+package com.devdroid.kikinbo.view
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

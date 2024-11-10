@@ -1,11 +1,10 @@
-package com.devdroid.kikinbo.ViewModel
+package com.devdroid.kikinbo.viewmodel
 
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.devdroid.kikinbo.Model.ProductDataModel
 import com.devdroid.kikinbo.R
 import com.google.firebase.database.*
 
@@ -20,17 +19,17 @@ class AddToCart : AppCompatActivity() {
     private lateinit var databaseReference: DatabaseReference
 
     // UI elements for displaying product name, price, and quantity controls
-    private lateinit var productNameTextView: TextView
-    private lateinit var productPriceTextView: TextView
-    private lateinit var increaseButton: Button
-    private lateinit var decreaseButton: Button
-    private lateinit var proceedToCheckoutButton: Button
+    private var productNameTextView: TextView = TODO()
+    private var productPriceTextView: TextView
+    private var increaseButton: Button
+    private var decreaseButton: Button
+    private var proceedToCheckoutButton: Button
 
     // Tracks the selected quantity of the product
-    private var quantity: Int = 0
+    var quantity: Int = 0
 
     // Stores the price of the product retrieved from Firebase
-    private var productPrice: Int = 0
+    var productPrice: Int = 0
 
     /**
      * Initializes the activity, sets up the UI elements, Firebase reference, and listeners
@@ -53,7 +52,7 @@ class AddToCart : AppCompatActivity() {
         proceedToCheckoutButton = findViewById(R.id.btnProceedToCheckout)
 
         // Fetch and display product data from Firebase
-        fetchProductData()
+        // fetchProductData()
 
         // Set click listeners for increasing and decreasing product quantity
         increaseButton.setOnClickListener {
@@ -79,7 +78,7 @@ class AddToCart : AppCompatActivity() {
      * Retrieves product price and displays it in the UI. If product data is not found,
      * an error message is shown.
      */
-    private fun fetchProductData() {
+    /**private fun fetchProductData() {
         val productName = "Headphone" // Product name to search for in Firebase
 
         // Query Firebase database for a product matching the specified name
@@ -109,13 +108,13 @@ class AddToCart : AppCompatActivity() {
                     Toast.makeText(this@AddToCart, "Error: ${databaseError.message}", Toast.LENGTH_SHORT).show()
                 }
             })
-    }
+    } */
 
     /**
      * Calculates and updates the total amount based on the current quantity and
      * product price. Displays the total amount in the UI.
      */
-    private fun updateTotalAmount() {
+    fun updateTotalAmount() {
         val totalAmount = quantity * productPrice
         findViewById<TextView>(R.id.tvTotalAmount).text = "Total Amount: $$totalAmount"
     }
