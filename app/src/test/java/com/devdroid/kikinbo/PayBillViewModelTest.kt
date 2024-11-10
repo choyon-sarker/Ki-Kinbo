@@ -54,9 +54,16 @@ class PayBillViewModelTest {
     }
     @Test
     fun validatePaymentAmountMaximumLimitReturnsSuccess() {
-        val amount = 10000  
+        val amount = 10000
         val result = payBillViewModel.validatePaymentAmount(amount)
         assertTrue("Payment amount should be accepted as it is within the maximum limit", result)
     }
+    @Test
+    fun validatePaymentAmountNonNumericStringReturnsError() {
+        val amount = "fifty"  // non-numeric string
+        val result = payBillViewModel.validatePaymentAmount(amount)
+        assertFalse("Payment amount should be numeric", result)  // This should fail now
+    }
+
 
 }
