@@ -60,6 +60,13 @@ class PayBillViewModelTest {
         val result = payBillViewModel.validatePaymentAmount(amount)
         assertFalse("Payment amount should be numeric", result)  // This should fail now
     }
+    @Test
+    fun validatePaymentMethodUncommonOptionReturnsError() {
+        val paymentMethod = "Gift Card"  // Unsupported payment method
+        val result = payBillViewModel.validatePaymentMethod(paymentMethod)
+        assertFalse("Payment method should be one of the predefined options", result)  // This should fail
+    }
+
 
 
 }
