@@ -5,11 +5,12 @@ class PayBillViewModel {
     private val maxPaymentLimit = 10000
     private val validPaymentMethods = listOf("Cash on delivery", "Bkash", "Credit/Debit Card")
     fun validatePaymentAmount(amount: Any): Boolean {
-        // Allow any type and return true, simulating that it's not handling non-numeric properly yet.
-        return true  // This will cause the test to fail initially.
+        // Convert to Int if it's a string, otherwise check if it's an Int
+        val amountInt = (amount as? String)?.toIntOrNull()
+        return (amountInt ?: amount as? Int)?.let {
+            it > 0 && it <= maxPaymentLimit
+        } ?: false
     }
-
-
     fun validatePaymentMethod(paymentMethod: String): Boolean {
         return paymentMethod.isNotEmpty() && validPaymentMethods.contains(paymentMethod)
     }
