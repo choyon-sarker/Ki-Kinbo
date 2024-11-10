@@ -12,7 +12,8 @@ class TrackOrderViewModel(private val repository: TrackOrderRepository) : ViewMo
     val orderStatus: LiveData<String> get() = _orderStatus
 
     fun loadOrderStatus(orderId: String) {
-        // Temporarily leave this empty or comment out the implementation
+        val status = repository.getOrderStatus(orderId)
+        _orderStatus.value = status
     }
 }
 
