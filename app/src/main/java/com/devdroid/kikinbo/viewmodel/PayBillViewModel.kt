@@ -8,7 +8,6 @@ class PayBillViewModel {
         return amount > 0 && amount <= maxPaymentLimit
     }
     fun validatePaymentMethod(paymentMethod: String): Boolean {
-        return paymentMethod.isNotEmpty()
+        return paymentMethod.isNotEmpty() && validPaymentMethods.contains(paymentMethod)
     }
-
 }
