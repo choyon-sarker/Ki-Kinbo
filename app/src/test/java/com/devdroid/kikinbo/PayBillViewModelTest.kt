@@ -20,18 +20,14 @@ class PayBillViewModelTest {
     @Test
     fun validatePaymentAmountZeroAmountReturnsError() {
         val amount = 0
-
         val result = payBillViewModel.validatePaymentAmount(amount)
-
         assertFalse("Payment amount should not be zero or negative", result)
     }
 
     @Test
     fun validatePaymentAmountNegativeAmountReturnsError() {
         val amount = -100
-
         val result = payBillViewModel.validatePaymentAmount(amount)
-
         assertFalse("Payment amount should not be zero or negative", result)
     }
     @Test
@@ -60,7 +56,7 @@ class PayBillViewModelTest {
     }
     @Test
     fun validatePaymentAmountNonNumericStringReturnsError() {
-        val amount = "fifty"  // non-numeric string
+        val amount = "fifty"
         val result = payBillViewModel.validatePaymentAmount(amount)
         assertFalse("Payment amount should be numeric", result)  // This should fail now
     }
