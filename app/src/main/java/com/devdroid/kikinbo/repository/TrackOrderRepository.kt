@@ -6,8 +6,11 @@ interface TrackOrderRepository {
 
 class FakeTrackOrderRepository : TrackOrderRepository {
     override fun getOrderStatus(orderId: String): String {
-        // Temporarily set all values to "Order not found" to make the test fail initially
-        return "Order not found"
+        return if (orderId == "ORDER123") {
+            "Pending"
+        } else {
+            "Order not found"
+        }
     }
 }
 
