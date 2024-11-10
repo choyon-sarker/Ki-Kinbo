@@ -51,4 +51,12 @@ class TrackOrderViewModelTest {
         viewModel.loadOrderStatus(validOrderId)
         assertEquals(expectedStatus, viewModel.orderStatus.value)
     }
+
+    @Test
+    fun resetOrderStatusClearsLiveData() {
+        viewModel.loadOrderStatus("ORDER123")
+        assertEquals("Pending", viewModel.orderStatus.value)
+        viewModel.resetOrderStatus()
+        assertNull(viewModel.orderStatus.value)
+    }
 }

@@ -15,5 +15,9 @@ class TrackOrderViewModel(private val repository: TrackOrderRepository) : ViewMo
         val status = repository.getOrderStatus(orderId)
         _orderStatus.value = status
     }
+
+    fun resetOrderStatus() {
+        _orderStatus.value = ""
+    }
 }
 
