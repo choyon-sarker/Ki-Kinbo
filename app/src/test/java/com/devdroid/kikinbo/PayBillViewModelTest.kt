@@ -2,6 +2,7 @@ package com.devdroid.kikinbo
 
 import com.devdroid.kikinbo.viewmodel.PayBillViewModel
 import org.junit.Assert.assertFalse
+import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
 
@@ -50,6 +51,12 @@ class PayBillViewModelTest {
         val invalidPaymentMethod = "Nogod"
         val result = viewModel.validatePaymentMethod(invalidPaymentMethod)
         assertFalse("Payment method should be one of the predefined options", result)
+    }
+    @Test
+    fun validatePaymentAmountMaximumLimitReturnsSuccess() {
+        val amount = 10000  
+        val result = payBillViewModel.validatePaymentAmount(amount)
+        assertTrue("Payment amount should be accepted as it is within the maximum limit", result)
     }
 
 }
