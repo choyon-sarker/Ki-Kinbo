@@ -46,14 +46,9 @@ class TrackOrderViewModelTest {
 
     @Test
     fun loadOrderStatusValidOrderIdUpdatesLiveDataWithStatus() {
-        // Arrange
-        val validOrderId = "ORDER123" // A valid order ID present in our "repository"
-        val expectedStatus = "Pending" // Expected output for the valid order ID
-
-        // Act
+        val validOrderId = "ORDER123"
+        val expectedStatus = "Pending"
         viewModel.loadOrderStatus(validOrderId)
-
-        // Assert
         assertEquals(expectedStatus, viewModel.orderStatus.value)
     }
 }
