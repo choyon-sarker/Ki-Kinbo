@@ -28,19 +28,25 @@ class TrackOrderViewModelTest {
 
     @Test
     fun testInitialOrderStatusLoading() {
-        // Setup an observer for the LiveData from the ViewModel
         val observer = Observer<String> { status ->
-            // Assert that the status is "Pending" for the hardcoded order
             assertEquals("Pending", status)
         }
-
-        // Observe the LiveData
         viewModel.orderStatus.observeForever(observer)
-
-        // Call the function to load order status for the valid orderId
         viewModel.loadOrderStatus(orderId)
-
-        // Clean up the observer
         viewModel.orderStatus.removeObserver(observer)
     }
+
+    @Test
+    fun loadOrderStatus_invalidOrderId_updatesLiveDataWithError() {
+        // Arrange
+        val invalidOrderId = "INVALID123" // An order ID that doesn't exist in our "repository"
+        val expectedStatus = "Order not found"
+
+        // Act
+        viewModel.loadOrderStatus(invalidOrderId)
+
+        // Assert
+        assertEquals(expectedStatus, viewModel.orderStatus.value)
+    }
+
 }
