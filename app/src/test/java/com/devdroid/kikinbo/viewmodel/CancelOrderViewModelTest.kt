@@ -66,4 +66,22 @@ class CancelOrderViewModelTest {
         assertTrue(result)
         assertEquals("Order ID is valid", viewModel.toastMessage)
     }
+
+    /**
+     * Tests the behavior of [CancelOrderViewModel.orderCanceled] when a valid order ID with a "Pending" status is provided.
+     *
+     * This test verifies that providing a valid order ID (e.g., "order001") with a "Pending" status in [DummyOrderDatabase]
+     * allows for a successful order cancellation. It checks that [orderCanceled] returns `true` and `toastMessage`
+     * contains "Order canceled successfully".
+     *
+     * Expected Result:
+     * - [orderCanceled] returns `true`.
+     * - `toastMessage` contains "Order canceled successfully".
+     */
+    @Test
+    fun validOrderIdOrderStatusPending() {
+        val result = viewModel.orderCanceled("order001")
+        assertTrue(result)
+        assertEquals("Order canceled successfully", viewModel.toastMessage)
+    }
 }
