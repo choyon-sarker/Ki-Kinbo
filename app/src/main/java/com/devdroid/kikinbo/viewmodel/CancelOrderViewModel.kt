@@ -24,13 +24,17 @@ class CancelOrderViewModel {
             return false
         }else if(orderId!=null){
             val order = getOrderById(orderId)
-            val storedOrder = dataStore.orders[orderId]
-
+            //val storedOrder = dataStore.orders[orderId]
             // Check if the user exists in the dummyUserDatabase and matches the retrieved user
-            if (order==storedOrder) {
-                toastMessage = "Order ID is valid"
-                return true
-            } else {
+            if (order != null) {
+                if (orderId==order.orderId) {
+                    toastMessage = "Order ID is valid"
+                    return true
+                } else {
+                    toastMessage = "Order not found. Please verify the order number."
+                    return false
+                }
+            }else{
                 toastMessage = "Order not found. Please verify the order number."
                 return false
             }
