@@ -119,4 +119,20 @@ class CancelOrderViewModelTest {
         assertFalse(result)
         assertEquals("Your order cannot be cancelled because it has already been delivered", viewModel.toastMessage)
     }
+    /**
+     * This test verifies that providing a valid order ID (e.g., "order004") with a "Cancelled" status in [DummyOrderDatabase]
+     * results in the cancellation attempt being prevented. It checks that [orderCanceled] returns `false` and [toastMessage]
+     * contains the message indicating the order has already been canceled.
+     *
+     * Expected Result:
+     * - [orderCanceled] returns `false`.
+     * - [toastMessage] contains "Your order has already been cancelled".
+     */
+    @Test
+    fun testCancelOrderAlreadyCancelled() {
+        // Assuming "order004" is a valid order that has already been canceled in DummyOrderDatabase
+        val result = viewModel.orderCanceled("order004")
+        assertFalse(result)
+        assertEquals("Your order has already been cancelled", viewModel.toastMessage)
+    }
 }

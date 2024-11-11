@@ -63,6 +63,11 @@ class CancelOrderViewModel {
                     toastMessage = "Your order cannot be cancelled because it has already been delivered"
                     false
                 }
+                "Cancelled" -> {
+                    orderCanceled = false
+                    toastMessage = "Your order has already been cancelled"
+                    false
+                }
                 else -> {
                     orderCanceled = false
                     toastMessage = "Order ID is not valid for cancellation"
