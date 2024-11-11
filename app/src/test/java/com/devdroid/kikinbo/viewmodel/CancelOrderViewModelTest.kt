@@ -149,7 +149,7 @@ class CancelOrderViewModelTest {
     fun testCancelOrderDuringMaintenanceMode() {
         val result = viewModel.orderCanceled("order006M")
         assertFalse(result)
-        assertEquals("We are unable to cancel your order at the moment due to technical issue. Please try gain later", viewModel.toastMessage)
+        assertEquals("We are unable to cancel your order at the moment due to a technical issue. Please try again later", viewModel.toastMessage)
     }
 
     /**
