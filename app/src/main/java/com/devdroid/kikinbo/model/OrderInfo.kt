@@ -4,5 +4,6 @@ data class OrderInfo(
     val userId:String,
     val orderId:String,
     val orderDateId:String,
-    val orderStatus:String
+    val orderStatus:String,
+    val maintainStatus:Boolean
 )

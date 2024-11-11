@@ -61,7 +61,7 @@ class CancelOrderViewModelTest {
      * with [validOrderId] returning `true` and `toastMessage` containing a success message.
      */
     @Test
-    fun validOrderId() {
+    fun testvalidOrderId() {
         val result = viewModel.validOrderId("order001")
         assertTrue(result)
         assertEquals("Order ID is valid", viewModel.toastMessage)
@@ -79,7 +79,7 @@ class CancelOrderViewModelTest {
      * - `toastMessage` contains "Order canceled successfully".
      */
     @Test
-    fun validOrderIdOrderStatusPending() {
+    fun testvalidOrderIdOrderStatusPending() {
         val result = viewModel.orderCanceled("order001")
         assertTrue(result)
         assertEquals("Order canceled successfully", viewModel.toastMessage)
@@ -104,7 +104,7 @@ class CancelOrderViewModelTest {
         assertEquals("Your order can be canceled with a penalty. A 10% charge will be applied to your product price", viewModel.toastMessage)
     }
 
-    /* This test verifies that providing a valid order ID (e.g., "order003") with a "Delivered" status in [DummyOrderDatabase]
+    /** This test verifies that providing a valid order ID (e.g., "order003") with a "Delivered" status in [DummyOrderDatabase]
     * results in the cancellation being prevented. It checks that [orderCanceled] returns `false` and [toastMessage] contains
     * the message indicating the order cannot be canceled because it has already been delivered.
     *
@@ -134,5 +134,53 @@ class CancelOrderViewModelTest {
         val result = viewModel.orderCanceled("order004")
         assertFalse(result)
         assertEquals("Your order has already been cancelled", viewModel.toastMessage)
+    }
+
+    /**
+     * This test verifies that when attempting to cancel an order during maintenance mode (e.g., "order006M"),
+     * the cancellation attempt fails, and the appropriate message is displayed. It checks that [orderCanceled] returns `false`
+     * and [toastMessage] contains the message indicating the order cannot be canceled due to a technical issue.
+     *
+     * Expected Result:
+     * - [orderCanceled] returns `false`.
+     * - [toastMessage] contains "We are unable to cancel your order at the moment due to a technical issue. Please try again later".
+     */
+    @Test
+    fun testCancelOrderDuringMaintenanceMode() {
+        val result = viewModel.orderCanceled("order006M")
+        assertFalse(result)
+        assertEquals("We are unable to cancel your order at the moment due to technical issue. Please try gain later", viewModel.toastMessage)
+    }
+
+    /**
+     * This test verifies that when attempting to cancel an order with a "Pending" status (e.g., "order005"),
+     * the cancellation attempt is successful. It checks that [orderCanceled] returns `true` and [toastMessage]
+     * contains the message indicating the order was canceled successfully.
+     *
+     * Expected Result:
+     * - [orderCanceled] returns `true`.
+     * - [toastMessage] contains "Order canceled successfully".
+     */
+    @Test
+    fun testCancelOrderNotInMaintenanceModeWithPendingStatus() {
+        val result = viewModel.orderCanceled("order005")
+        assertTrue(result)
+        assertEquals("Order canceled successfully", viewModel.toastMessage)
+    }
+
+    /**
+     * This test verifies that when attempting to cancel an order with an invalid or non-existent order ID (e.g.,
+     * "nonExistingOrder"), the system returns the appropriate error message. It checks that [orderCanceled] returns
+     * `false` and [toastMessage] contains the message indicating the order was not found.
+     *
+     * Expected Result:
+     * - [orderCanceled] returns `false`.
+     * - [toastMessage] contains "Order not found. Please verify the order number".
+     */
+    @Test
+    fun testOrderNotFoundAfterValidIdCheck() {
+        val result = viewModel.orderCanceled("nonExistingOrder")
+        assertFalse(result)
+        assertEquals("Order not found. Please verify the order number", viewModel.toastMessage)
     }
 }

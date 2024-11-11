@@ -10,6 +10,9 @@ class CancelOrderViewModel {
     // Boolean variable to track if the order has been placed
     var orderCanceled: Boolean = false
 
+    // Boolean variable to track if the server is in maintainance status
+    val maintainstatus:Boolean=false
+
     // Create an instance of DummyDataStore
     val dataStore = DummyOrderDatabase()
 
@@ -47,38 +50,47 @@ class CancelOrderViewModel {
     fun orderCanceled(orderId: String) :Boolean {
         if (validOrderId(orderId)) {
             val order = getOrderById(orderId)
-            return when (order?.orderStatus) {
-                "Pending" -> {
-                    orderCanceled = true
-                    toastMessage = "Order canceled successfully"
-                    true
-                }
-                "Shipping" -> {
-                    orderCanceled = false
-                    toastMessage = "Your order can be canceled with a penalty. A 10% charge will be applied to your product price"
-                    false
-                }
-                "Delivered" -> {
-                    orderCanceled = false
-                    toastMessage = "Your order cannot be cancelled because it has already been delivered"
-                    false
-                }
-                "Cancelled" -> {
-                    orderCanceled = false
-                    toastMessage = "Your order has already been cancelled"
-                    false
-                }
-                else -> {
-                    orderCanceled = false
-                    toastMessage = "Order ID is not valid for cancellation"
-                    false
-                }
+            if (order != null) {
+                    return when (order.orderStatus) {
+                        "Pending" -> {
+                            orderCanceled = true
+                            toastMessage = "Order canceled successfully"
+                            true
+                        }
+
+                        "Shipping" -> {
+                            orderCanceled = false
+                            toastMessage =
+                                "Your order can be canceled with a penalty. A 10% charge will be applied to your product price"
+                            false
+                        }
+
+                        "Delivered" -> {
+                            orderCanceled = false
+                            toastMessage =
+                                "Your order cannot be cancelled because it has already been delivered"
+                            false
+                        }
+
+                        "Cancelled" -> {
+                            orderCanceled = false
+                            toastMessage = "Your order has already been cancelled"
+                            false
+                        }
+
+                        else -> {
+                            orderCanceled = false
+                            toastMessage = "Order ID is not valid for cancellation"
+                            false
+                        }
+                    }
             }
-        } else {
-            orderCanceled = false
-            toastMessage = "Order not found. Please verify the order number"
+            orderCanceled=false
+            toastMessage="Order not found. Please verify the order number"
             return false
+
         }
+        return true
     }
 }
 
