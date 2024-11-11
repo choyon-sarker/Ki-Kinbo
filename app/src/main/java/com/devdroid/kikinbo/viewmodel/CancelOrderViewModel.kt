@@ -31,11 +31,11 @@ class CancelOrderViewModel {
                     toastMessage = "Order ID is valid"
                     return true
                 } else {
-                    toastMessage = "Order not found. Please verify the order number."
+                    toastMessage = "Order not found. Please verify the order number"
                     return false
                 }
             }else{
-                toastMessage = "Order not found. Please verify the order number."
+                toastMessage = "Order not found. Please verify the order number"
                 return false
             }
         }
@@ -45,13 +45,19 @@ class CancelOrderViewModel {
     }
 
     fun orderCanceled(orderId: String) :Boolean {
-        if(validOrderId(orderId)){
-            orderCanceled = true
-            toastMessage = "Order canceled successfully"
-            return true
-        }else{
+        if (validOrderId(orderId)) {
+            val order = getOrderById(orderId)
+            if (order?.orderStatus == "Pending") {
+                orderCanceled = true
+                toastMessage = "Your order is cancelled"
+                return true
+            } else {
+                toastMessage = "Order cannot be canceled because it is not in 'Pending' status."
+                return false
+            }
+        } else {
             orderCanceled = false
-            toastMessage = "Order ID is not valid"
+            toastMessage = "Order not found. Please verify the order number"
             return false
         }
     }

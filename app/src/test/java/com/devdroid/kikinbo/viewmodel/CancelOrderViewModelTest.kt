@@ -51,7 +51,7 @@ class CancelOrderViewModelTest {
         // Test an invalid order ID
         val result = viewModel.validOrderId("order000")
         assertFalse(result)
-        assertEquals("Order not found. Please verify the order number.", viewModel.toastMessage)
+        assertEquals("Order not found. Please verify the order number", viewModel.toastMessage)
     }
 
     /**
