@@ -84,4 +84,23 @@ class CancelOrderViewModelTest {
         assertTrue(result)
         assertEquals("Order canceled successfully", viewModel.toastMessage)
     }
+
+    /**
+     * Tests the behavior of [CancelOrderViewModel.orderCanceled] when a valid order ID with a "Shipping" status is provided.
+     *
+     * This test verifies that providing a valid order ID (e.g., "order002") with a "Shipping" status in [DummyOrderDatabase]
+     * results in a failed cancellation attempt. It checks that [orderCanceled] returns `false` and `toastMessage`
+     * contains "Your order can be canceled with a penalty. A 10% charge will be applied to your product price".
+     *
+     * Expected Result:
+     * - [orderCanceled] returns `false`.
+     * - `toastMessage` contains "Your order can be canceled with a penalty. A 10% charge will be applied to your product price".
+     */
+    @Test
+    fun testValidOrderIdWithShippedStatus() {
+        // Assuming "order002" is a valid ID and its status is "Shipped" in DummyOrderDatabase
+        val result = viewModel.orderCanceled("order002")
+        assertFalse(result)
+        assertEquals("Your order can be canceled with a penalty. A 10% charge will be applied to your product price", viewModel.toastMessage)
+    }
 }

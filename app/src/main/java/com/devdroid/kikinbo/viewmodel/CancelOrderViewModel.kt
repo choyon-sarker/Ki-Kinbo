@@ -47,13 +47,22 @@ class CancelOrderViewModel {
     fun orderCanceled(orderId: String) :Boolean {
         if (validOrderId(orderId)) {
             val order = getOrderById(orderId)
-            if (order?.orderStatus == "Pending") {
-                orderCanceled = true
-                toastMessage = "Your order is cancelled"
-                return true
-            } else {
-                toastMessage = "Order cannot be canceled because it is not in 'Pending' status."
-                return false
+            return when (order?.orderStatus) {
+                "Pending" -> {
+                    orderCanceled = true
+                    toastMessage = "Order canceled successfully"
+                    true
+                }
+                "Shipping" -> {
+                    orderCanceled = false
+                    toastMessage = "Your order can be canceled with a penalty. A 10% charge will be applied to your product price"
+                    false
+                }
+                else -> {
+                    orderCanceled = false
+                    toastMessage = "Order ID is not valid for cancellation"
+                    false
+                }
             }
         } else {
             orderCanceled = false

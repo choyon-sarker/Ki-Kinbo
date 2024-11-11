@@ -15,7 +15,7 @@ class DummyOrderDatabase {
             userId = "user456",
             orderId = "order002",
             orderDateId = "2024-11-02",
-            orderStatus = "Shipped"
+            orderStatus = "Shipping"
         ),
         "order003" to OrderInfo(
             userId = "user789",
