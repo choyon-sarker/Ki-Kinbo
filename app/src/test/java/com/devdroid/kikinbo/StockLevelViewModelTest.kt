@@ -66,6 +66,39 @@ package com.devdroid.kikinbo
             assertTrue(isStockLevelValidPositive)   // Should return true because positive values are valid
         }
 
+        @Test
+        fun testProductNameValidation() {
+            val emptyProductName = ""     // Invalid product name (empty)
+            val blankProductName = "     " // Invalid product name (blank spaces)
+            val validProductName = "Test Product" // Valid product name
+
+            // Trying to set an empty product name (will fail initially)
+            val isValidEmptyProductName = viewModel.setStockLevel(emptyProductName, 10, 10)
+            assertFalse(isValidEmptyProductName)  // Should return false because empty product names are invalid
+
+            // Trying to set a blank product name (will fail initially)
+            val isValidBlankProductName = viewModel.setStockLevel(blankProductName, 10, 10)
+            assertFalse(isValidBlankProductName)  // Should return false because blank product names are invalid
+
+            // Trying to set a valid product name (should pass)
+            val isValidProductName = viewModel.setStockLevel(validProductName, 10, 10)
+            assertTrue(isValidProductName)   // Should return true because non-empty product names are valid
+        }
+
+        @Test
+        fun `setStockLevel should return false for empty product name`() {
+            // Arrange
+            val productName = "" // empty product name
+            val stockLevel = 10
+            val restockThreshold = 5
+
+            // Act
+            val result = viewModel.setStockLevel(productName, stockLevel, restockThreshold)
+
+            // Assert
+            assertFalse(result) // Expecting false because the product name is invalid
+        }
+
     }
 
 
