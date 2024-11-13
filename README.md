@@ -148,7 +148,13 @@ Firebase is essential for authentication, data storage, and media management in 
 5. **Download and Add Firebase Configuration File:**
    - Place the **google-services.json** file in the app directory of your project. Ensure you sync your project files in Android Studio after adding the file.     
 
-
+## Running the Project
+After setting up Firebase and dependencies, you’re ready to run the project.
+1. **Connect an Android** device or start an emulator in Android Studio.
+2. Run the project by clicking on the **Run** button in Android Studio or pressing **Shift + F10**.
+3. **Test Firebase Integration:**
+   - Try signing in or registering to ensure Firebase Authentication is working.
+   - Verify data is stored in the Firebase Realtime Database as you interact with the app.
 
 
 
