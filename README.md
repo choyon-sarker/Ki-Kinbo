@@ -4,11 +4,11 @@ Welcome to our _**Ki Kinbo! - An Online Supershop Management System**_. This pro
 ### Team Name: **LessThanSix**
 49th Batch, Department of Computer Science & Engineering, Jahangirnagar University, Bangladesh
 ### Team Members: 
-- NUZHAT NAIRY AFRIN (NN)- 355
-- LAMIA BINTA LATIF (LB)- 366
-- YUMNA TASNEEM (YT)- 369
-- CHOYON SARKER (CS)- 392
-- RAIAN RASHID (RR)- 403
+- NUZHAT NAIRY AFRIN (NN) - 355
+- LAMIA BINTA LATIF (LB) - 366
+- YUMNA TASNEEM (YT) - 369
+- CHOYON SARKER (CS) - 392
+- RAIAN RASHID (RR) - 403
 ## Project Overview
 "Ki Kinbo!" Supershop Management System is an Android-based online supershop app focused on delivering a seamless and user-friendly shopping experience. Built using the MVVM (Model-View-ViewModel) architecture and Firebase, the app also streamlines store management by simplifying inventory and sales tracking. Designed to enhance customer satisfaction and loyalty, "Ki Kinbo!" aims to expand market reach and build strong brand recognition. Customers can browse, compare, and buy products across categories, with fast navigation and secure transactions. 
 ## Features
