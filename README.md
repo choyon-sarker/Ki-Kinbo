@@ -25,6 +25,12 @@ Welcome to our _**Ki Kinbo! - An Online Supershop Management System**_. This pro
 - **Technical Support:** Post-launch support to resolve issues and maintain platform stability.
 - **Firebase Integration:** Includes authentication, real-time database, and media storage through Firebase.
 ## Prerequisites
+Before you start, ensure you have the following installed:
+- [Android Studio](https://developer.android.com/studio)
+- JDK 11 or higher
+- An active [Firebase](https://firebase.google.com/) account.
+
+
 ## Installation Instructions for _**Ki Kinbo!**_ Project
 Let's get started with **Ki Kinbo!** 🚀
 
