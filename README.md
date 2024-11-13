@@ -82,7 +82,7 @@ The project uses dependencies for Firebase, Material Design, and AndroidX librar
 
 ## Generate Documentation 
 ## Watch on Our Youtube Channel
-[![KDoc documentation tool integration by helping dokka tutorial  on Youtube](https://img.youtube.com/vi/lcpnnJtDdAU?si=EZxYG1iOiBhvcvl2.jpg)](https://youtu.be/watch?v=lcpnnJtDdAU&t=2s)
+[![KDoc documentation tool integration by helping dokka tutorial on Youtube](https://img.youtube.com/vi/lcpnnJtDdAU?si=EZxYG1iOiBhvcvl2.jpg)](https://youtu.be/watch?v=lcpnnJtDdAU&t=2s)
 ## Contributing To The Project
 Thank you for your interest in contributing to Ki Kinbo!. We’re excited to have you collaborate on improving this project! Below are detailed steps to help you get started with your contributions.
 1. **Fork the Repository:**
@@ -132,7 +132,21 @@ Thank you for your interest in contributing to Ki Kinbo!. We’re excited to hav
     - Push any additional changes to the same branch, and they will automatically appear in the pull request.
 10. **Celebrate your contribution:**
     - Once your pull request is approved and merged, congratulations! You’ve contributed to Ki Kinbo! 🎉
-     
+
+## Setting Up Firebase
+Firebase is essential for authentication, data storage, and media management in this project.
+1. **Create Firebase Project:**
+     - Go to [Firebase](https://console.firebase.google.com/)
+     - Sign in with your Google account. Click on Add Project, enter a project name (e.g., 'Ki Kinbo!'), follow the setup steps, and click **Create Project**.
+2. **Add Android App:**
+   - In the Firebase console, select your project and navigate to Project Settings. Scroll down to Your Apps and click on Add App > Android. Enter your app's package name (e.g., 'com.devdroid.kikinbo').
+   - Register the app and download the **google-services.json** file.
+3. **Enable Authentication:**
+   - In your Firebase console, go to Authentication > Sign-in Method. Enable the authentication methods you will use (e.g., Email/Password, Google).
+4. **Set Up Firestore Database:**
+   - In the Firebase console, navigate to Firestore Database > Create Database. Select a mode (either Start in production mode or Start in test mode) and set up your Firestore.
+5. **Download and Add Firebase Configuration File:**
+   - Place the **google-services.json** file in the app directory of your project. Ensure you sync your project files in Android Studio after adding the file.     
 
 
 
