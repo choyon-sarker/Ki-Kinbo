@@ -173,6 +173,49 @@ class PlaceOrderViewModel {
     }
 
     /**
+     * Validates the given email address according to the following rules:
+     *
+     * 1. The email should not be null or empty.
+     * 2. The email should only contain lowercase letters, digits, and the special characters '@', '.', '-', or '_'.
+     * 3. The email should match the pattern of a valid email address, in the format of `username@domain.extension`,
+     *    where:
+     *    - `username` can contain lowercase letters, digits, and special characters `._-`.
+     *    - `domain` can contain lowercase letters, digits, and special characters `.-`.
+     *    - `extension` must be at least two lowercase letters.
+     *
+     * @param userEmail The email address to be validated. It can be null or empty.
+     *
+     * @return `true` if the email is valid according to the rules, `false` otherwise.
+     *
+     * @throws IllegalArgumentException if an unexpected error occurs during validation.
+     *
+     * The function also updates the `toastMessage` variable with an appropriate message in case of an invalid email:
+     * - "User email address is required" if the email is null or empty.
+     * - "Email address must contain only lowercase letters, digits, and '@', '.', '-', or '_'" if the email contains invalid characters.
+     * - "Email address pattern is invalid" if the email does not match a valid email format.
+     */
+    fun validUserEmail(userEmail: String?): Boolean {
+        if (userEmail.isNullOrEmpty()) {
+            toastMessage = "User email address is required"
+            return false
+        }
+
+        if (!userEmail.all { it.isLowerCase() || it.isDigit() || it == '@' || it == '.' || it == '-' || it == '_' }) {
+            toastMessage = "Email address must contain only lowercase letters, digits, and '@', '.', '-', or '_'"
+            return false
+        }
+
+        val emailPattern = Regex("^[a-z0-9._-]+@[a-z0-9.-]+\\.[a-z]{2,}$")
+
+        if (!emailPattern.matches(userEmail)) {
+            toastMessage = "Email address pattern is invalid"
+            return false
+        }
+
+        return true
+    }
+
+    /**
      * Places an order if all validation checks pass.
      *
      * @param userId The user ID placing the order.
@@ -192,7 +235,8 @@ class PlaceOrderViewModel {
     ) :Boolean{
         if (validUserId(userId) &&
             validUserPhone(userPhone) &&
-            validCityDivisionCountry(shippingAddress.city, shippingAddress.division, shippingAddress.country)
+            validCityDivisionCountry(shippingAddress.city, shippingAddress.division, shippingAddress.country) &&
+            validUserEmail(userEmail)
         ) {
             orderPlaced = true
             toastMessage = "Order placed successfully"
