@@ -3,8 +3,8 @@ package com.devdroid.kikinbo.model
 class DummyDataStore {
     // Dummy user database
     val dummyUserDatabase = hashMapOf(
-        "user1" to UserDataModel("user1", "Alice", "alice@example.com", "1234567890"),
-        "user2" to UserDataModel("user2", "Bob", "bob@example.com", "0987654321"),
+        "user1" to UserDataModel("user1", "Alice", "alice@example.com", "01345678901"),
+        "user2" to UserDataModel("user2", "Bob", "bob@example.com", "01876543211"),
         "user3" to UserDataModel("user3", "Charlie", "charlie@example.com", null) // No phone number
     )
 

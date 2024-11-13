@@ -14,9 +14,12 @@ import com.devdroid.kikinbo.model.OrderItemDataModel
 import com.devdroid.kikinbo.model.ShippingAddressDataModel
 import com.devdroid.kikinbo.viewmodel.PlaceOrderViewModel
 
+/**
+ * The PlaceOrderView class represents the activity for placing an order.
+ * Users can input shipping information and view order item details before placing an order.
+ * It handles user input validation, displays order summary, and navigates to the payment screen upon order placement.
+ */
 class PlaceOrderView : AppCompatActivity() {
-
-//    private val placeOrderViewModel: PlaceOrderViewModel by viewModels()
 
     private lateinit var editShippingCity: EditText
     private lateinit var userEditPhone: EditText
@@ -28,6 +31,12 @@ class PlaceOrderView : AppCompatActivity() {
     private lateinit var userIdEditText: EditText
     private lateinit var textProducts: TextView
 
+    /**
+     * Called when the activity is first created. Initializes the view elements
+     * and sets up the functionality to handle order placement.
+     * @param savedInstanceState If the activity is being re-initialized after previously being shut down,
+     * this Bundle contains the data it most recently supplied.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -44,11 +53,11 @@ class PlaceOrderView : AppCompatActivity() {
         userEditPhone = findViewById(R.id.editPhoneid)
         textProducts = findViewById(R.id.text_products)
 
-        // Retrieve the order items and total amount from the Intent
+        // Retrieve order items and total amount from the intent
         val orderItems = intent.getSerializableExtra("orderItems") as? ArrayList<OrderItemDataModel>
         val totalAmount = intent.getIntExtra("totalAmount", 0)
 
-        // Check if there are order items, then iterate and display them
+        // Display order item details if available
         if (orderItems != null && orderItems.isNotEmpty()) {
             val productsString = orderItems.joinToString("\n") { item ->
                 "${item.productName} (ID: ${item.productId}) - Qty: ${item.quantity} x ${item.price} = ${item.quantity * item.price}"
@@ -60,14 +69,24 @@ class PlaceOrderView : AppCompatActivity() {
             textProducts.text = "Please add items to your order."
         }
 
-        // Place Order button click listener
+        // Set up the Place Order button click listener
         btnPlaceOrder.setOnClickListener {
+//
+//        }
+//    }
+//
+//    /**
+//     * Handles the order placement process. Validates user inputs, collects shipping address details,
+//     * and calls the [PlaceOrderViewModel.placeOrder] function to place the order.
+//     * If order placement is successful, navigates to the [PaymentMethod] screen.
+//     *
+//     * @param orderItems The list of items being ordered by the user.
+//     * @param totalAmount The total cost of the items in the order.
+//     */
+//    private fun placeOrder(orderItems: ArrayList<OrderItemDataModel>?, totalAmount: Int) {
             val userId1 = userIdEditText.text.toString()
             val userPhone1 = userEditPhone.text.toString()
             val userEmail1 = userEditEmail.text.toString()
-
-            // Validate inputs
-//            if (!PlaceOrderViewModel().validateInputs(userPhone1, userEmail1)) return@setOnClickListener
 
             val shippingAddress = ShippingAddressDataModel(
                 city = editShippingCity.text.toString(),
@@ -76,8 +95,7 @@ class PlaceOrderView : AppCompatActivity() {
             )
 
             if (orderItems != null) {
-                // Call the ViewModel to place the order
-                val isOrderValid: Unit =PlaceOrderViewModel().placeOrder(
+                val isOrderValid = PlaceOrderViewModel().placeOrder(
                     userId = userId1,
                     userPhone = userPhone1,
                     userEmail = userEmail1,
@@ -85,12 +103,11 @@ class PlaceOrderView : AppCompatActivity() {
                     shippingAddress = shippingAddress,
                     totalAmount = totalAmount
                 )
-                if (isOrderValid as Boolean){
-                    // Navigate to payment screen after placing the order
+                if (isOrderValid) {
                     Toast.makeText(this, "Order placed successfully", Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this, PaymentMethod::class.java))
                 } else {
-                    Toast.makeText(this, "Order placed Failed", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Order placement failed", Toast.LENGTH_SHORT).show()
                 }
             } else {
                 Toast.makeText(this, "No items selected for the order", Toast.LENGTH_SHORT).show()

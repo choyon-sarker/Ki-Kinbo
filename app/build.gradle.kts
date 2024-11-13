@@ -110,6 +110,7 @@ dependencies {
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
 
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.9.24")
+    implementation(kotlin("script-runtime"))
 
 
 }
