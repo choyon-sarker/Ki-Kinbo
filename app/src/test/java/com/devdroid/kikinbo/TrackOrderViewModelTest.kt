@@ -15,13 +15,11 @@ class TrackOrderViewModelTest {
     private lateinit var repository: TrackOrderRepository
     private val orderId = "ORDER123"
 
-    // Rule to execute tasks synchronously on the main thread during testing
     @get:Rule
     var instantExecutorRule = InstantTaskExecutorRule()
 
     @Before
     fun setUp() {
-        // Initialize repository and ViewModel with hardcoded data
         repository = FakeTrackOrderRepository()
         viewModel = TrackOrderViewModel(repository)
     }
@@ -58,6 +56,21 @@ class TrackOrderViewModelTest {
         assertEquals("Pending", viewModel.orderStatus.value)
         viewModel.resetOrderStatus()
         assertEquals("", viewModel.orderStatus.value)
-
     }
+
+    @Test
+    fun `when refreshOrderStatus is called, it should update the status to the latest data from repository`() {
+        val repository = FakeTrackOrderRepository()
+        val viewModel = TrackOrderViewModel(repository)
+        repository.setOrderStatus("ORDER123", "Shipped")
+        viewModel.loadOrderStatus("ORDER123")
+        assertEquals("Shipped", viewModel.orderStatus.value)
+        repository.setOrderStatus("ORDER123", "Delivered")
+        assertNotEquals("Delivered", viewModel.orderStatus.value)
+        viewModel.refreshOrderStatus()
+        assertEquals("Delivered", viewModel.orderStatus.value)
+    }
+
+
+
 }

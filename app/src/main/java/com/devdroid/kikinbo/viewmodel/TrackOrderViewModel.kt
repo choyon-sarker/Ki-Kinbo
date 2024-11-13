@@ -10,14 +10,22 @@ class TrackOrderViewModel(private val repository: TrackOrderRepository) : ViewMo
 
     private val _orderStatus = MutableLiveData<String>()
     val orderStatus: LiveData<String> get() = _orderStatus
+    private var _orderId: String? = null
 
     fun loadOrderStatus(orderId: String) {
-        val status = repository.getOrderStatus(orderId)
-        _orderStatus.value = status
+        _orderId = orderId
+        _orderStatus.value = repository.getOrderStatus(orderId)
     }
 
     fun resetOrderStatus() {
         _orderStatus.value = ""
+    }
+
+    // Method to manually refresh the order status
+    fun refreshOrderStatus() {
+        _orderId?.let {
+            _orderStatus.value = repository.getOrderStatus(it) // Refresh the order status
+        }
     }
 }
 
