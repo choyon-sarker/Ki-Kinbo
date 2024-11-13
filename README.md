@@ -61,6 +61,9 @@ The project uses dependencies for Firebase, Material Design, and AndroidX librar
    - Confirm compatibility:
       - Ensure that both minSdkVersion and targetSdkVersion are compatible with the Firebase libraries used in the project. Adjust as necessary to avoid compatibility issues with Firebase and other libraries.
 
+## Generate Documentation 
+## Watch on Our Youtube Channel
+[KDoc documentation tool integration by helping dokka tutorial  on Youtube](https://youtu.be/lcpnnJtDdAU?si=Zzrk5WZtCTo8pbpB)
 ## Contributing To The Project
 Thank you for your interest in contributing to Ki Kinbo!. We’re excited to have you collaborate on improving this project! Below are detailed steps to help you get started with your contributions.
 1. **Fork the Repository:**
