@@ -1,1 +1,2 @@
-# Ki-Kinbo
+# Ki Kinbo! - An Online Supershop Management System
+
