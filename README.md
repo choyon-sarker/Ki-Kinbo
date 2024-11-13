@@ -82,7 +82,7 @@ The project uses dependencies for Firebase, Material Design, and AndroidX librar
 
 ## Generate Documentation 
 ## Watch on Our Youtube Channel
-[![KDoc documentation tool integration by helping dokka tutorial  on Youtube](https://img.youtube.com/vi/lcpnnJtDdAU?si=EZxYG1iOiBhvcvl2/0.jpg)](https://youtu.be/watch?v=lcpnnJtDdAU&t=2s)
+[![KDoc documentation tool integration by helping dokka tutorial  on Youtube](https://img.youtube.com/vi/lcpnnJtDdAU?si=EZxYG1iOiBhvcvl2.jpg)](https://youtu.be/watch?v=lcpnnJtDdAU&t=2s)
 ## Contributing To The Project
 Thank you for your interest in contributing to Ki Kinbo!. We’re excited to have you collaborate on improving this project! Below are detailed steps to help you get started with your contributions.
 1. **Fork the Repository:**
