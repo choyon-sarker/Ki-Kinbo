@@ -12,7 +12,18 @@ Welcome to our _**Ki Kinbo! - An Online Supershop Management System**_. This pro
 ## Project Overview
 "Ki Kinbo!" Supershop Management System is an Android-based online supershop app focused on delivering a seamless and user-friendly shopping experience. Built using the MVVM (Model-View-ViewModel) architecture and Firebase, the app also streamlines store management by simplifying inventory and sales tracking. Designed to enhance customer satisfaction and loyalty, "Ki Kinbo!" aims to expand market reach and build strong brand recognition. Customers can browse, compare, and buy products across categories, with fast navigation and secure transactions. 
 ## Features
-
+- **User-Friendly Interface:** Intuitive design with fast navigation for a smooth shopping experience.
+- **Product Browsing & Search:** Browse products across categories with search filters for quick access.
+- **Shopping Cart & Checkout:** Secure and simple cart and checkout process, supporting multiple payment options.
+- **Order Management:** Customers can track orders; managers oversee processing and fulfillment.
+- **Inventory Management:** Efficient stock management with easy inventory updates for managers.
+- **Customer Account Management:** Profile setup, order history, and personalized recommendations.
+- **Admin Panel:** A backend panel for admins to manage roles, configurations, and system operations.
+- **Reports & Analytics:** Sales, customer trends, and inventory insights for strategic planning.
+- **Security & Compliance:** Secure login and data protection aligned with regulatory standards.
+- **Marketing & Campaign Tracking:** Tools for creating campaigns and tracking engagement.
+- **Technical Support:** Post-launch support to resolve issues and maintain platform stability.
+- **Firebase Integration:** Includes authentication, real-time database, and media storage through Firebase.
 ## Prerequisites
 ## Installation Instructions for _**Ki Kinbo!**_ Project
 Let's get started with **Ki Kinbo!** 🚀
