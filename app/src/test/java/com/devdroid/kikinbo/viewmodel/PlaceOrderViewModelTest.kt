@@ -2,7 +2,6 @@ package com.devdroid.kikinbo.viewmodel
 
 import com.devdroid.kikinbo.model.OrderItemDataModel
 import com.devdroid.kikinbo.model.ShippingAddressDataModel
-//import com.devdroid.kikinbo.viewmodel.PlaceOrderViewModel
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Assertions.assertNull
@@ -26,6 +25,18 @@ class PlaceOrderViewModelTest {
     fun setUp() {
         // Initialize the ViewModel before each test
         viewModel = PlaceOrderViewModel()
+    }
+
+    /**
+     * Tests the validation of user ID is Null or Empty.
+     * Asserts that the user ID is Empty and the correct toast message is set.
+     */
+    @Test
+    fun testNullUserId() {
+        // Test a Null user ID
+        val result = viewModel.validUserId("")
+        assertFalse(result)
+        assertEquals("User ID is empty", viewModel.toastMessage)
     }
 
     /**
@@ -107,7 +118,7 @@ class PlaceOrderViewModelTest {
     @Test
     fun testPlacingOrderWithValidInputs() {
         // Create dummy order items
-        val orderItems = arrayListOf(OrderItemDataModel("product1", "a", 10, 200))
+        val orderItems = arrayListOf(OrderItemDataModel("product1", "a", 100, 20,50))
 
         // Create a shipping address
         val shippingAddress = ShippingAddressDataModel("Dhaka", "Dhaka", "Bangladesh")
@@ -133,7 +144,7 @@ class PlaceOrderViewModelTest {
     @Test
     fun testPlacingOrderWithInvalidPhoneNumber() {
         // Create dummy order items
-        val orderItems = arrayListOf(OrderItemDataModel("product1", "aa", 3, 20))
+        val orderItems = arrayListOf(OrderItemDataModel("product1", "aa", 30, 20,60))
 
         // Create a shipping address
         val shippingAddress = ShippingAddressDataModel("Dhaka", "Dhaka", "Bangladesh")
@@ -159,7 +170,7 @@ class PlaceOrderViewModelTest {
     @Test
     fun testPlacingOrderWithInvalidUserId() {
         // Create dummy order items
-        val orderItems = arrayListOf(OrderItemDataModel("product1", "this", 8, 100))
+        val orderItems = arrayListOf(OrderItemDataModel("product1", "this", 80, 10,30))
 
         // Create a shipping address
         val shippingAddress = ShippingAddressDataModel("Dhaka", "Dhaka", "Bangladesh")
@@ -274,5 +285,124 @@ class PlaceOrderViewModelTest {
         val result = viewModel.validUserEmail("choyon@gmail.")
         assertFalse(result)
         assertEquals("Email address pattern is invalid", viewModel.toastMessage)
+    }
+
+    @Test
+    fun testIsProductInStockSufficientStock() {
+        val orderItems = arrayListOf(
+            OrderItemDataModel("p001", "Headphone", 30, 5,20)  // Available stock is 5, requested quantity is 3
+        )
+        val result = viewModel.isProductInStock("p001", 3, orderItems)
+        assertTrue(result)  // The product should be in stock
+    }
+
+    @Test
+    fun testIsProductInStockInsufficientStock() {
+        val orderItems = arrayListOf(
+            OrderItemDataModel("p001", "Headphone", 3, 5,20)  // Available stock is 2, requested quantity is 3
+        )
+
+        val result = viewModel.isProductInStock("p001", 5, orderItems)
+
+        assertFalse(result)  // The product should not be in stock
+    }
+
+
+    @Test
+    fun testIsProductInStockProductNotFound() {
+        val orderItems = arrayListOf(
+            OrderItemDataModel("p001", "Headphone", 5, 3,20)
+        )
+        val result = viewModel.isProductInStock("Noproduct", 5, orderItems)
+        assertFalse(result)  // The product should not be found
+    }
+
+    @Test
+    fun testValidateStockAvailabilityAllProductsInStock() {
+        val orderItems = arrayListOf(
+            OrderItemDataModel("p001", "Headphone", 30, 5,150),  // Available stock is 5, requested quantity is 3
+            OrderItemDataModel("p002", "Mouse", 20, 4,200)   // Available stock is 4, requested quantity is 2
+        )
+
+        val result = viewModel.validateStockAvailability(orderItems)
+
+        assertTrue(result)  // All products should be in stock
+        assertNull(viewModel.toastMessage)  // No error message should be set
+    }
+
+    @Test
+    fun testValidateStockAvailabilityInsufficientStockForOneProduct() {
+        val orderItems = arrayListOf(
+            OrderItemDataModel("p001", "Headphone", 10, 15,100),  // Available stock is 2, requested quantity is 3
+            OrderItemDataModel("p002", "Mouse", 20, 4,30)   // Available stock is 4, requested quantity is 2
+        )
+
+        val result = viewModel.validateStockAvailability(orderItems)
+
+        assertFalse(result)  // One product has insufficient stock
+        assertEquals("Insufficient stock for product: Headphone Only 10 available.", viewModel.toastMessage)
+    }
+
+    @Test
+    fun testValidateStockAvailabilityInsufficientStockForMultipleProducts() {
+        val orderItems = arrayListOf(
+            OrderItemDataModel("p001", "Headphone", 3, 20, 100),  // Available stock is 100, requested quantity is 3
+            OrderItemDataModel("p002", "Mouse", 3, 10, 55)    // Available stock is 55, requested quantity is 3
+        )
+
+        val result = viewModel.validateStockAvailability(orderItems)
+
+        // Assert that the result is false because the stock is insufficient for both products
+        assertFalse(result)
+
+        // Prepare the expected toast message with both errors
+        val expectedMessage = """
+        Insufficient stock for product: Headphone Only 3 available.
+        Insufficient stock for product: Mouse Only 3 available.
+    """.trimIndent()
+
+        // Assert that the toast message contains both error messages
+        assertEquals(expectedMessage, viewModel.toastMessage)
+    }
+
+    @Test
+    fun testValidateStockAvailabilityInsufficientStockForMultipleProducts2() {
+        val orderItems = arrayListOf(
+            OrderItemDataModel("p001", "Headphone", 3, 20, 600),  // Available stock is 3, requested quantity is 3
+            OrderItemDataModel("p002", "Mouse", 3, 10, 300),    // Available stock is 3, requested quantity is 3
+            OrderItemDataModel("p003","Keyboard",5,10,1200)      // Available stock is 5 , requested quantity is 10
+        )
+        val result = viewModel.validateStockAvailability(orderItems)
+        assertFalse(result)  // Both products have insufficient stock
+        // Check that the toastMessage contains both error messages
+        val expectedMessage = """
+        Insufficient stock for product: Headphone Only 3 available.
+        Insufficient stock for product: Mouse Only 3 available.
+        Insufficient stock for product: Keyboard Only 5 available.""".trimIndent()
+
+        assertEquals(expectedMessage, viewModel.toastMessage)
+    }
+
+    @Test
+    fun testValidateStockAvailabilityEmptyOrderList() {
+        val orderItems = arrayListOf<OrderItemDataModel>()  // Empty order list
+
+        val result = viewModel.validateStockAvailability(orderItems)
+
+        assertTrue(result)  // An empty order list should be valid (no products to check)
+        assertNull(viewModel.toastMessage)  // No error message should be set
+    }
+
+    @Test
+    fun testValidateStockAvailabilityMixedStockAvailability() {
+        val orderItems = arrayListOf(
+            OrderItemDataModel("p001", "Headphone", 5, 3,30),  // Available stock is 5, requested quantity is 3
+            OrderItemDataModel("p002", "Mouse", 2, 3,60)   // Available stock is 2, requested quantity is 3
+        )
+
+        val result = viewModel.validateStockAvailability(orderItems)
+
+        assertFalse(result)  // Second product has insufficient stock
+        assertEquals("Insufficient stock for product: Mouse Only 2 available.", viewModel.toastMessage)
     }
 }

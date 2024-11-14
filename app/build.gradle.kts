@@ -47,9 +47,10 @@ android {
         }
     }
 }
-tasks.dokkaHtml {
-    outputDirectory.set(buildDir.resolve("dokka"))
-}
+//tasks.dokkaHtml {
+//    outputDirectory.set(buildDir.resolve("dokka"))
+//}
+tasks.dokkaHtml.configure { outputDirectory.set(file("../documentation/html")) }
 tasks.withType<Test> {
     useJUnitPlatform()
 }

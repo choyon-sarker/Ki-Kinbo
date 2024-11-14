@@ -1,6 +1,6 @@
 package com.devdroid.kikinbo.viewmodel
 
-import com.devdroid.kikinbo.model.DummyDataStore
+import com.devdroid.kikinbo.model.repository.DummyDataStore
 import com.devdroid.kikinbo.model.OrderItemDataModel
 import com.devdroid.kikinbo.model.ShippingAddressDataModel
 import com.devdroid.kikinbo.model.UserDataModel
@@ -27,6 +27,45 @@ class PlaceOrderViewModel {
      */
     fun getUserById(userId: String): UserDataModel? {
         return dataStore.dummyUserDatabase[userId] // Returns the UserDataModel or null if userId doesn't exist
+    }
+
+    /**
+     * Checks if the required quantity of the product is available in stock.
+     *
+     * @param productId The unique identifier for the product.
+     * @param quantity The quantity the user wants to purchase.
+     * @return True if the product's stock is sufficient, false if not.
+     */
+    fun isProductInStock(productId: String, quantity: Int, orderItems: ArrayList<OrderItemDataModel>): Boolean {
+        // Find the product in the orderItems list
+        val product = orderItems.find { it.productId == productId }
+
+        // Check if the product exists and if the available stock is sufficient
+        return product != null && product.availableStock >= quantity
+    }
+
+    /**
+     * Validates if the required stock is available for each product in the order.
+     *
+     * @param orderItems The list of items being ordered.
+     * @return True if all items have sufficient stock, false if any item has insufficient stock.
+     */
+    fun validateStockAvailability(orderItems: ArrayList<OrderItemDataModel>): Boolean {
+        var isStockAvailable = true
+        var errorMessage = ""
+
+        for (item in orderItems) {
+            if (!isProductInStock(item.productId, item.quantity, orderItems)) {
+                isStockAvailable = false
+                errorMessage += "Insufficient stock for product: ${item.productName} Only ${item.availableStock} available.\n"
+            }
+        }
+
+        if (!isStockAvailable) {
+            toastMessage = errorMessage.trim()
+        }
+
+        return isStockAvailable
     }
 
     /**
@@ -233,7 +272,10 @@ class PlaceOrderViewModel {
         shippingAddress: ShippingAddressDataModel,
         totalAmount: Int
     ) :Boolean{
-        if (validUserId(userId) &&
+        // First, validate stock availability
+        if (!validateStockAvailability(items)) {
+            return false
+        }else if (validUserId(userId) &&
             validUserPhone(userPhone) &&
             validCityDivisionCountry(shippingAddress.city, shippingAddress.division, shippingAddress.country) &&
             validUserEmail(userEmail)

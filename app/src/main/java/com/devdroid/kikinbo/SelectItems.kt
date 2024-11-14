@@ -45,7 +45,7 @@ class SelectItems : AppCompatActivity() {
             if (btnSelectHeadphone.isChecked) {
                 val headphoneQty = productQuantityid1.text.toString().toIntOrNull() ?: 0
                 if (headphoneQty > 0) {
-                    itemsToSend.add(OrderItemDataModel("Headphoneid", "Headphone", headphoneQty, 200))
+                    itemsToSend.add(OrderItemDataModel("Headphoneid", "Headphone", headphoneQty, 20, 300))
                 }
             }
 
@@ -53,7 +53,7 @@ class SelectItems : AppCompatActivity() {
             if (btnSelectMouse.isChecked) {
                 val mouseQty = productQuantityid2.text.toString().toIntOrNull() ?: 0
                 if (mouseQty > 0) {
-                    itemsToSend.add(OrderItemDataModel("Mouseid", "Mouse", mouseQty, 150))
+                    itemsToSend.add(OrderItemDataModel("Mouseid", "Mouse", mouseQty, 15,230))
                 }
             }
 
@@ -61,7 +61,7 @@ class SelectItems : AppCompatActivity() {
             if (btnSelectPen.isChecked) {
                 val penQty = productQuantityid3.text.toString().toIntOrNull() ?: 0
                 if (penQty > 0) {
-                    itemsToSend.add(OrderItemDataModel("Penid", "Pen", penQty, 15))
+                    itemsToSend.add(OrderItemDataModel("Penid", "Pen", penQty, 15,35))
                 }
             }
 

@@ -13,6 +13,7 @@ import java.io.Serializable
 data class OrderItemDataModel(
     val productId: String,
     val productName: String,
+    val availableStock: Int,
     val quantity: Int,
     val price: Int
 ):Serializable
