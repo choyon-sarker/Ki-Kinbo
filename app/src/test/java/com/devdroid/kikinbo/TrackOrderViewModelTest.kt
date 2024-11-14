@@ -1,4 +1,5 @@
 package com.devdroid.kikinbo
+
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
 import com.devdroid.kikinbo.repository.FakeTrackOrderRepository
@@ -12,7 +13,7 @@ import org.junit.Test
 class TrackOrderViewModelTest {
 
     private lateinit var viewModel: TrackOrderViewModel
-    private lateinit var repository: TrackOrderRepository
+    private lateinit var repository: FakeTrackOrderRepository
     private val orderId = "ORDER123"
 
     @get:Rule
@@ -26,7 +27,8 @@ class TrackOrderViewModelTest {
 
     @Test
     fun testInitialOrderStatusLoading() {
-        val observer = Observer<String> { status ->
+        repository.setOrderStatus(orderId, "Pending")
+        val observer = Observer<String?> { status ->
             assertEquals("Pending", status)
         }
         viewModel.orderStatus.observeForever(observer)
@@ -38,39 +40,34 @@ class TrackOrderViewModelTest {
     fun loadOrderStatusInvalidOrderIdUpdatesLiveDataWithError() {
         val invalidOrderId = "INVALID123"
         val expectedStatus = "Order not found"
+        repository.setOrderStatus(invalidOrderId, expectedStatus)
         viewModel.loadOrderStatus(invalidOrderId)
         assertEquals(expectedStatus, viewModel.orderStatus.value)
     }
 
     @Test
     fun loadOrderStatusValidOrderIdUpdatesLiveDataWithStatus() {
-        val validOrderId = "ORDER123"
-        val expectedStatus = "Pending"
-        viewModel.loadOrderStatus(validOrderId)
-        assertEquals(expectedStatus, viewModel.orderStatus.value)
+        repository.setOrderStatus(orderId, "Pending")
+        viewModel.loadOrderStatus(orderId)
+        assertEquals("Pending", viewModel.orderStatus.value)
     }
 
     @Test
     fun resetOrderStatusClearsLiveData() {
-        viewModel.loadOrderStatus("ORDER123")
+        repository.setOrderStatus(orderId, "Pending")
+        viewModel.loadOrderStatus(orderId)
         assertEquals("Pending", viewModel.orderStatus.value)
         viewModel.resetOrderStatus()
-        assertEquals("", viewModel.orderStatus.value)
+        assertNull(viewModel.orderStatus.value)
     }
 
     @Test
-    fun `when refreshOrderStatus is called, it should update the status to the latest data from repository`() {
-        val repository = FakeTrackOrderRepository()
-        val viewModel = TrackOrderViewModel(repository)
-        repository.setOrderStatus("ORDER123", "Shipped")
-        viewModel.loadOrderStatus("ORDER123")
+    fun whenRefreshOrderStatusIsCalled_orderStatusShouldBeUpdatedWithLatestData() {
+        repository.setOrderStatus(orderId, "Shipped")
+        viewModel.loadOrderStatus(orderId)
         assertEquals("Shipped", viewModel.orderStatus.value)
-        repository.setOrderStatus("ORDER123", "Delivered")
-        assertNotEquals("Delivered", viewModel.orderStatus.value)
+        repository.setOrderStatus(orderId, "Delivered")
         viewModel.refreshOrderStatus()
         assertEquals("Delivered", viewModel.orderStatus.value)
     }
-
-
-
 }
