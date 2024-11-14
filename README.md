@@ -62,7 +62,8 @@ The project uses dependencies for Firebase, Material Design, and AndroidX librar
        - **Project-level** build.gradle: This file manages global settings and dependencies shared across all modules.
        - **App-level** build.gradle: This file manages dependencies specific to the app module.
    - In the app-level build.gradle file, ensure the required dependencies are listed as shown below:
-<pre>  dependencies {
+<pre>  dependencies 
+{
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
