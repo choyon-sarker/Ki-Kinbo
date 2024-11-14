@@ -24,6 +24,18 @@ Welcome to our _**Ki Kinbo! - An Online Supershop Management System**_. This pro
 - **Marketing & Campaign Tracking:** Tools for creating campaigns and tracking engagement.
 - **Technical Support:** Post-launch support to resolve issues and maintain platform stability.
 - **Firebase Integration:** Includes authentication, real-time database, and media storage through Firebase.
+## Usage
+**For Customers:**
+- **Sign Up and Log In:** Users can create accounts and securely log in through Firebase Authentication to access personalized features.
+- **Browse and Search Products:** Explore products by categories or search for specific items.
+- **Add to Cart and Checkout:** Add items to the shopping cart and complete purchases through a secure, straightforward checkout process.
+- **Order Tracking:** Track the status of orders in real-time after checkout.
+- **Account Management:** Update profile details, view order history, and manage saved items.
+  
+**For Shop Managers:**
+- **Inventory Control:** Access the product management section to add, edit, or delete items, monitor stock levels, and manage listings.
+- **Sales Tracking:** Review sales data and generate reports to understand trends and track sales performance.
+- **Order Fulfillment:** Oversee the entire order lifecycle, from order placement to delivery, ensuring timely processing and shipment. 
 ## Prerequisites
 Before you start, ensure you have the following installed:
 - [Android Studio](https://developer.android.com/studio)
@@ -215,18 +227,7 @@ After setting up Firebase and dependencies, you’re ready to run the project.
 3. **Test Firebase Integration:**
    - Try signing in or registering to ensure Firebase Authentication is working.
    - Verify data is stored in the Firebase Realtime Database as you interact with the app.
-## Usage
-**For Customers:**
-- **Sign Up and Log In:** Users can create accounts and securely log in through Firebase Authentication to access personalized features.
-- **Browse and Search Products:** Explore products by categories or search for specific items.
-- **Add to Cart and Checkout:** Add items to the shopping cart and complete purchases through a secure, straightforward checkout process.
-- **Order Tracking:** Track the status of orders in real-time after checkout.
-- **Account Management:** Update profile details, view order history, and manage saved items.
-  
-**For Shop Managers:**
-- **Inventory Control:** Access the product management section to add, edit, or delete items, monitor stock levels, and manage listings.
-- **Sales Tracking:** Review sales data and generate reports to understand trends and track sales performance.
-- **Order Fulfillment:** Oversee the entire order lifecycle, from order placement to delivery, ensuring timely processing and shipment. 
+
 
 
 
