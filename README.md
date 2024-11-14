@@ -62,14 +62,59 @@ The project uses dependencies for Firebase, Material Design, and AndroidX librar
        - **Project-level** build.gradle: This file manages global settings and dependencies shared across all modules.
        - **App-level** build.gradle: This file manages dependencies specific to the app module.
    - In the app-level build.gradle file, ensure the required dependencies are listed as shown below:
-<pre>  dependencies 
-  { 
-  implementation(libs.androidx.core.ktx) 
-  implementation(libs.androidx.appcompat) 
-  implementation(libs.material) 
-  implementation(libs.androidx.activity) 
-  // Add other required dependencies here 
-  }  </pre>
+<pre>  dependencies {
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.database)
+    implementation(libs.androidx.recyclerview)
+    implementation(libs.firebase.firestore.ktx)
+    implementation(libs.androidx.lifecycle.livedata.testing)
+
+    // JUnit 4 for unit tests
+    testImplementation("junit:junit:4.13.2")
+
+    // Robolectric for Android unit testing
+    testImplementation("org.robolectric:robolectric:4.9.1")
+    testImplementation(libs.junit.jupiter)
+    testImplementation(libs.testng)
+    testImplementation(libs.junit.jupiter)
+    testImplementation(libs.junit.jupiter)
+    // Check for the latest version
+
+    // Android test dependencies
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+
+    // Dokka
+    implementation("org.jetbrains.dokka:dokka-core:1.7.10")
+    // JUnit 5
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.0")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.10.0")
+
+    // Optional: AssertJ for fluent assertions (optional but helpful)
+    testImplementation("org.assertj:assertj-core:3.24.2")
+
+    // Android Testing libraries
+    // To test LiveData and ViewModel
+    testImplementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7")
+    implementation("androidx.lifecycle:lifecycle-livedata-testing:2.6.1")
+    testImplementation("io.mockk:mockk:1.12.3") // For mocking in tests (mockk instead of Mockito)
+
+    // Optionally, add JUnit Platform for running tests
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher:1.10.0")
+
+    // For testing LiveData objects and ViewModel
+    testImplementation("androidx.arch.core:core-testing:2.2.0")
+    // Test for Kotlin coroutines (if your ViewModel uses coroutines)
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
+
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.9.24")
+    implementation(kotlin("script-runtime"))
+}  </pre>
 2. **Sync dependencies:**
    - After verifying dependencies, click **Sync Now** if prompted at the top of the build.gradle file. This will download and install all necessary libraries and packages for the project.
    - If no prompt appears, manually initiate a sync by selecting **File > Sync Project with Gradle Files.**
