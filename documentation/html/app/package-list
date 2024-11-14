@@ -1,21 +1,28 @@
 $dokka.format:html-v1
 $dokka.linkExtension:html
+$dokka.location:com.devdroid.kikinbo.model.repository////PointingToDeclaration/app/com.devdroid.kikinbo.model.repository/index.html
+$dokka.location:com.devdroid.kikinbo.model.repository/DummyDataStore///PointingToDeclaration/app/com.devdroid.kikinbo.model.repository/-dummy-data-store/index.html
+$dokka.location:com.devdroid.kikinbo.model.repository/DummyDataStore/DummyDataStore/#/PointingToDeclaration/app/com.devdroid.kikinbo.model.repository/-dummy-data-store/-dummy-data-store.html
+$dokka.location:com.devdroid.kikinbo.model.repository/DummyDataStore/dummyOrderItems/#/PointingToDeclaration/app/com.devdroid.kikinbo.model.repository/-dummy-data-store/dummy-order-items.html
+$dokka.location:com.devdroid.kikinbo.model.repository/DummyDataStore/dummyShippingAddresses/#/PointingToDeclaration/app/com.devdroid.kikinbo.model.repository/-dummy-data-store/dummy-shipping-addresses.html
+$dokka.location:com.devdroid.kikinbo.model.repository/DummyDataStore/dummyUserDatabase/#/PointingToDeclaration/app/com.devdroid.kikinbo.model.repository/-dummy-data-store/dummy-user-database.html
+$dokka.location:com.devdroid.kikinbo.model.repository/DummyDataStore/productStockList/#/PointingToDeclaration/app/com.devdroid.kikinbo.model.repository/-dummy-data-store/product-stock-list.html
+$dokka.location:com.devdroid.kikinbo.model.repository/DummyProductInfoDataStore///PointingToDeclaration/app/com.devdroid.kikinbo.model.repository/-dummy-product-info-data-store/index.html
+$dokka.location:com.devdroid.kikinbo.model.repository/DummyProductInfoDataStore/DummyProductInfoDataStore/#/PointingToDeclaration/app/com.devdroid.kikinbo.model.repository/-dummy-product-info-data-store/-dummy-product-info-data-store.html
+$dokka.location:com.devdroid.kikinbo.model.repository/DummyProductInfoDataStore/product1/#/PointingToDeclaration/app/com.devdroid.kikinbo.model.repository/-dummy-product-info-data-store/product1.html
+$dokka.location:com.devdroid.kikinbo.model.repository/DummyProductInfoDataStore/product2/#/PointingToDeclaration/app/com.devdroid.kikinbo.model.repository/-dummy-product-info-data-store/product2.html
+$dokka.location:com.devdroid.kikinbo.model.repository/DummyProductInfoDataStore/product3/#/PointingToDeclaration/app/com.devdroid.kikinbo.model.repository/-dummy-product-info-data-store/product3.html
+$dokka.location:com.devdroid.kikinbo.model.repository/DummyProductInfoDataStore/product4/#/PointingToDeclaration/app/com.devdroid.kikinbo.model.repository/-dummy-product-info-data-store/product4.html
+$dokka.location:com.devdroid.kikinbo.model.repository/DummyProductInfoDataStore/product5/#/PointingToDeclaration/app/com.devdroid.kikinbo.model.repository/-dummy-product-info-data-store/product5.html
+$dokka.location:com.devdroid.kikinbo.model.repository/DummyProductInfoDataStore/product6/#/PointingToDeclaration/app/com.devdroid.kikinbo.model.repository/-dummy-product-info-data-store/product6.html
+$dokka.location:com.devdroid.kikinbo.model.repository/DummyUserInfoDataStore///PointingToDeclaration/app/com.devdroid.kikinbo.model.repository/-dummy-user-info-data-store/index.html
+$dokka.location:com.devdroid.kikinbo.model.repository/DummyUserInfoDataStore/DummyUserInfoDataStore/#/PointingToDeclaration/app/com.devdroid.kikinbo.model.repository/-dummy-user-info-data-store/-dummy-user-info-data-store.html
+$dokka.location:com.devdroid.kikinbo.model.repository/DummyUserInfoDataStore/demoUser1/#/PointingToDeclaration/app/com.devdroid.kikinbo.model.repository/-dummy-user-info-data-store/demo-user1.html
+$dokka.location:com.devdroid.kikinbo.model.repository/DummyUserInfoDataStore/demoUser2/#/PointingToDeclaration/app/com.devdroid.kikinbo.model.repository/-dummy-user-info-data-store/demo-user2.html
+$dokka.location:com.devdroid.kikinbo.model.repository/DummyUserInfoDataStore/demoUser3/#/PointingToDeclaration/app/com.devdroid.kikinbo.model.repository/-dummy-user-info-data-store/demo-user3.html
+$dokka.location:com.devdroid.kikinbo.model.repository/DummyUserInfoDataStore/demoUser4/#/PointingToDeclaration/app/com.devdroid.kikinbo.model.repository/-dummy-user-info-data-store/demo-user4.html
+$dokka.location:com.devdroid.kikinbo.model.repository/DummyUserInfoDataStore/demoUser5/#/PointingToDeclaration/app/com.devdroid.kikinbo.model.repository/-dummy-user-info-data-store/demo-user5.html
 $dokka.location:com.devdroid.kikinbo.model////PointingToDeclaration/app/com.devdroid.kikinbo.model/index.html
-$dokka.location:com.devdroid.kikinbo.model//demoUser1/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/demo-user1.html
-$dokka.location:com.devdroid.kikinbo.model//demoUser2/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/demo-user2.html
-$dokka.location:com.devdroid.kikinbo.model//demoUser3/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/demo-user3.html
-$dokka.location:com.devdroid.kikinbo.model//demoUser4/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/demo-user4.html
-$dokka.location:com.devdroid.kikinbo.model//demoUser5/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/demo-user5.html
-$dokka.location:com.devdroid.kikinbo.model//product1/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/product1.html
-$dokka.location:com.devdroid.kikinbo.model//product2/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/product2.html
-$dokka.location:com.devdroid.kikinbo.model//product3/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/product3.html
-$dokka.location:com.devdroid.kikinbo.model//product4/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/product4.html
-$dokka.location:com.devdroid.kikinbo.model//product5/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/product5.html
-$dokka.location:com.devdroid.kikinbo.model//product6/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/product6.html
-$dokka.location:com.devdroid.kikinbo.model/DummyDataStore///PointingToDeclaration/app/com.devdroid.kikinbo.model/-dummy-data-store/index.html
-$dokka.location:com.devdroid.kikinbo.model/DummyDataStore/DummyDataStore/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-dummy-data-store/-dummy-data-store.html
-$dokka.location:com.devdroid.kikinbo.model/DummyDataStore/dummyShippingAddresses/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-dummy-data-store/dummy-shipping-addresses.html
-$dokka.location:com.devdroid.kikinbo.model/DummyDataStore/dummyUserDatabase/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-dummy-data-store/dummy-user-database.html
 $dokka.location:com.devdroid.kikinbo.model/OrderDataModel///PointingToDeclaration/app/com.devdroid.kikinbo.model/-order-data-model/index.html
 $dokka.location:com.devdroid.kikinbo.model/OrderDataModel/OrderDataModel/#kotlin.String?#kotlin.collections.List[com.devdroid.kikinbo.model.OrderItemDataModel?]#com.devdroid.kikinbo.model.ShippingAddressDataModel?#kotlin.Long?#kotlin.Int?/PointingToDeclaration/app/com.devdroid.kikinbo.model/-order-data-model/-order-data-model.html
 $dokka.location:com.devdroid.kikinbo.model/OrderDataModel/items/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-order-data-model/items.html
@@ -24,7 +31,8 @@ $dokka.location:com.devdroid.kikinbo.model/OrderDataModel/shippingAddress/#/Poin
 $dokka.location:com.devdroid.kikinbo.model/OrderDataModel/totalAmount/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-order-data-model/total-amount.html
 $dokka.location:com.devdroid.kikinbo.model/OrderDataModel/userId/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-order-data-model/user-id.html
 $dokka.location:com.devdroid.kikinbo.model/OrderItemDataModel///PointingToDeclaration/app/com.devdroid.kikinbo.model/-order-item-data-model/index.html
-$dokka.location:com.devdroid.kikinbo.model/OrderItemDataModel/OrderItemDataModel/#kotlin.String#kotlin.String#kotlin.Int#kotlin.Int/PointingToDeclaration/app/com.devdroid.kikinbo.model/-order-item-data-model/-order-item-data-model.html
+$dokka.location:com.devdroid.kikinbo.model/OrderItemDataModel/OrderItemDataModel/#kotlin.String#kotlin.String#kotlin.Int#kotlin.Int#kotlin.Int/PointingToDeclaration/app/com.devdroid.kikinbo.model/-order-item-data-model/-order-item-data-model.html
+$dokka.location:com.devdroid.kikinbo.model/OrderItemDataModel/availableStock/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-order-item-data-model/available-stock.html
 $dokka.location:com.devdroid.kikinbo.model/OrderItemDataModel/price/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-order-item-data-model/price.html
 $dokka.location:com.devdroid.kikinbo.model/OrderItemDataModel/productId/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-order-item-data-model/product-id.html
 $dokka.location:com.devdroid.kikinbo.model/OrderItemDataModel/productName/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-order-item-data-model/product-name.html
@@ -38,6 +46,11 @@ $dokka.location:com.devdroid.kikinbo.model/ProductDataModel/productName/#/Pointi
 $dokka.location:com.devdroid.kikinbo.model/ProductDataModel/productPrice/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-data-model/product-price.html
 $dokka.location:com.devdroid.kikinbo.model/ProductDataModel/productRating/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-data-model/product-rating.html
 $dokka.location:com.devdroid.kikinbo.model/ProductDataModel/productReview/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-data-model/product-review.html
+$dokka.location:com.devdroid.kikinbo.model/ProductStockInto///PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-stock-into/index.html
+$dokka.location:com.devdroid.kikinbo.model/ProductStockInto/ProductStockInto/#kotlin.String#kotlin.String#kotlin.Int/PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-stock-into/-product-stock-into.html
+$dokka.location:com.devdroid.kikinbo.model/ProductStockInto/availableStock/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-stock-into/available-stock.html
+$dokka.location:com.devdroid.kikinbo.model/ProductStockInto/productId/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-stock-into/product-id.html
+$dokka.location:com.devdroid.kikinbo.model/ProductStockInto/productName/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-stock-into/product-name.html
 $dokka.location:com.devdroid.kikinbo.model/ShippingAddressDataModel///PointingToDeclaration/app/com.devdroid.kikinbo.model/-shipping-address-data-model/index.html
 $dokka.location:com.devdroid.kikinbo.model/ShippingAddressDataModel/ShippingAddressDataModel/#kotlin.String#kotlin.String#kotlin.String/PointingToDeclaration/app/com.devdroid.kikinbo.model/-shipping-address-data-model/-shipping-address-data-model.html
 $dokka.location:com.devdroid.kikinbo.model/ShippingAddressDataModel/city/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-shipping-address-data-model/city.html
@@ -86,6 +99,7 @@ $dokka.location:com.devdroid.kikinbo.viewmodel/PlaceOrderViewModel/PlaceOrderVie
 $dokka.location:com.devdroid.kikinbo.viewmodel/PlaceOrderViewModel/dataStore/#/PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-place-order-view-model/data-store.html
 $dokka.location:com.devdroid.kikinbo.viewmodel/PlaceOrderViewModel/getCitiesInDivisionAndCountry/#kotlin.String#kotlin.String/PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-place-order-view-model/get-cities-in-division-and-country.html
 $dokka.location:com.devdroid.kikinbo.viewmodel/PlaceOrderViewModel/getUserById/#kotlin.String/PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-place-order-view-model/get-user-by-id.html
+$dokka.location:com.devdroid.kikinbo.viewmodel/PlaceOrderViewModel/isProductInStock/#kotlin.String#kotlin.Int#java.util.ArrayList[com.devdroid.kikinbo.model.OrderItemDataModel]/PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-place-order-view-model/is-product-in-stock.html
 $dokka.location:com.devdroid.kikinbo.viewmodel/PlaceOrderViewModel/orderPlaced/#/PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-place-order-view-model/order-placed.html
 $dokka.location:com.devdroid.kikinbo.viewmodel/PlaceOrderViewModel/placeOrder/#kotlin.String#kotlin.String#kotlin.String#java.util.ArrayList[com.devdroid.kikinbo.model.OrderItemDataModel]#com.devdroid.kikinbo.model.ShippingAddressDataModel#kotlin.Int/PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-place-order-view-model/place-order.html
 $dokka.location:com.devdroid.kikinbo.viewmodel/PlaceOrderViewModel/toastMessage/#/PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-place-order-view-model/toast-message.html
@@ -94,6 +108,7 @@ $dokka.location:com.devdroid.kikinbo.viewmodel/PlaceOrderViewModel/validUserEmai
 $dokka.location:com.devdroid.kikinbo.viewmodel/PlaceOrderViewModel/validUserId/#kotlin.String/PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-place-order-view-model/valid-user-id.html
 $dokka.location:com.devdroid.kikinbo.viewmodel/PlaceOrderViewModel/validUserPhone/#kotlin.String?/PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-place-order-view-model/valid-user-phone.html
 $dokka.location:com.devdroid.kikinbo.viewmodel/PlaceOrderViewModel/validateInputs/#kotlin.String#kotlin.String/PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-place-order-view-model/validate-inputs.html
+$dokka.location:com.devdroid.kikinbo.viewmodel/PlaceOrderViewModel/validateStockAvailability/#java.util.ArrayList[com.devdroid.kikinbo.model.OrderItemDataModel]/PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-place-order-view-model/validate-stock-availability.html
 $dokka.location:com.devdroid.kikinbo.viewmodel/ProductSearchViewModel///PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-product-search-view-model/index.html
 $dokka.location:com.devdroid.kikinbo.viewmodel/ProductSearchViewModel/ProductSearchViewModel/#kotlin.collections.List[com.devdroid.kikinbo.model.ProductDataModel]/PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-product-search-view-model/-product-search-view-model.html
 $dokka.location:com.devdroid.kikinbo.viewmodel/ProductSearchViewModel/filterProductsByCategory/#kotlin.String/PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-product-search-view-model/filter-products-by-category.html
@@ -106,13 +121,17 @@ $dokka.location:com.devdroid.kikinbo.viewmodel/PushUserData/PushUserData/#/Point
 $dokka.location:com.devdroid.kikinbo.viewmodel/PushUserData/fPushUserData/#/PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-push-user-data/f-push-user-data.html
 $dokka.location:com.devdroid.kikinbo.viewmodel/SearchProduct///PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-search-product/index.html
 $dokka.location:com.devdroid.kikinbo.viewmodel/SearchProduct/SearchProduct/#/PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-search-product/-search-product.html
+$dokka.location:com.devdroid.kikinbo.viewmodel/SelectItemsViewModel///PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-select-items-view-model/index.html
+$dokka.location:com.devdroid.kikinbo.viewmodel/SelectItemsViewModel/SelectItemsViewModel/#android.app.Application/PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-select-items-view-model/-select-items-view-model.html
+$dokka.location:com.devdroid.kikinbo.viewmodel/SelectItemsViewModel/processOrder/#kotlin.Int#kotlin.Int#kotlin.Int/PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-select-items-view-model/process-order.html
 $dokka.location:com.devdroid.kikinbo////PointingToDeclaration/app/com.devdroid.kikinbo/index.html
 $dokka.location:com.devdroid.kikinbo/PaymentMethod///PointingToDeclaration/app/com.devdroid.kikinbo/-payment-method/index.html
 $dokka.location:com.devdroid.kikinbo/PaymentMethod/PaymentMethod/#/PointingToDeclaration/app/com.devdroid.kikinbo/-payment-method/-payment-method.html
-$dokka.location:com.devdroid.kikinbo/SelectItems///PointingToDeclaration/app/com.devdroid.kikinbo/-select-items/index.html
-$dokka.location:com.devdroid.kikinbo/SelectItems/SelectItems/#/PointingToDeclaration/app/com.devdroid.kikinbo/-select-items/-select-items.html
+$dokka.location:com.devdroid.kikinbo/SelectItemsView///PointingToDeclaration/app/com.devdroid.kikinbo/-select-items-view/index.html
+$dokka.location:com.devdroid.kikinbo/SelectItemsView/SelectItemsView/#/PointingToDeclaration/app/com.devdroid.kikinbo/-select-items-view/-select-items-view.html
 com.devdroid.kikinbo
 com.devdroid.kikinbo.model
+com.devdroid.kikinbo.model.repository
 com.devdroid.kikinbo.repository
 com.devdroid.kikinbo.view
 com.devdroid.kikinbo.view.adapter
