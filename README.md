@@ -129,7 +129,20 @@ The project uses dependencies for Firebase, Material Design, and AndroidX librar
 ## Generate Documentation 
 ### Watch the tutorial on our Youtube Channel
 A comprehensive and detailed tutorial on how to generate coding documentation using KDoc via Dokka. The tutorial includes a step-by-step procedure.
-[Watch this](https://youtu.be/watch?v=lcpnnJtDdAU&t=2s)
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=lcpnnJtDdAU&t=2s">
+    <img src="https://img.youtube.com/vi/lcpnnJtDdAU/maxresdefault.jpg" alt="Video Thumbnail" />
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
 ## Contributing To The Project
 Thank you for your interest in contributing to Ki Kinbo!. We’re excited to have you collaborate on improving this project! Below are detailed steps to help you get started with your contributions.
 1. **Fork the Repository:**
