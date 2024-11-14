@@ -1,7 +1,12 @@
 package com.devdroid.kikinbo.model
 
-// Data class with primary constructor parameters
+/**
+ * Data model representing payment details for an order.
+ *
+ * @property amount The total amount of the payment in the relevant currency.
+ * @property paymentMethod The method used for the payment (e.g., "Credit Card", "PayPal").
+ */
 data class PaymentDetails(
-    val amount: Int,          // Payment amount
-    val paymentMethod: String // Payment method (e.g., Credit Card, Cash, etc.)
+    val amount: Int,
+    val paymentMethod: String
 )
