@@ -1,9 +1,9 @@
 package com.devdroid.kikinbo.viewmodel
 
-import com.devdroid.kikinbo.model.repository.DummyDataStore
 import com.devdroid.kikinbo.model.OrderItemDataModel
 import com.devdroid.kikinbo.model.ShippingAddressDataModel
 import com.devdroid.kikinbo.model.UserDataModel
+import com.devdroid.kikinbo.model.repository.DummyDataStore
 
 /**
  * ViewModel class responsible for handling the logic of placing an order.

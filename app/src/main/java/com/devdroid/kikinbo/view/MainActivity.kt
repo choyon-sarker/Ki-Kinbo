@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.devdroid.kikinbo.R
-import com.devdroid.kikinbo.SelectItems
+import com.devdroid.kikinbo.SelectItemsView
 import com.devdroid.kikinbo.viewmodel.SearchProduct
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.database.FirebaseDatabase
@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
         // Set up the Place Order button to navigate to PlaceOrderView on click
         val placeOrder: Button =findViewById(R.id.btnSelectItems)
         placeOrder.setOnClickListener {
-            val i=Intent(this@MainActivity, SelectItems::class.java)
+            val i=Intent(this, SelectItemsView::class.java)
             startActivity(i)
         }
 

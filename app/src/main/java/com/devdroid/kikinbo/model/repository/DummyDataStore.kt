@@ -1,6 +1,7 @@
 package com.devdroid.kikinbo.model.repository
 
 import com.devdroid.kikinbo.model.OrderItemDataModel
+import com.devdroid.kikinbo.model.ProductStockInto
 import com.devdroid.kikinbo.model.ShippingAddressDataModel
 import com.devdroid.kikinbo.model.UserDataModel
 
@@ -68,6 +69,14 @@ class DummyDataStore {
             quantity = 1,
             price = 20000 // Price in cents, i.e., $200.00
         )
+    )
+
+    // Define the list of product stock (you can fetch this from your repository or data store)
+    // Dummy info for products with stock level
+    val productStockList: List<ProductStockInto> = listOf(
+        ProductStockInto("Headphoneid", "Headphone", 100),
+        ProductStockInto("Mouseid", "Mouse", 50),
+        ProductStockInto("Penid", "Pen", 200)
     )
 
 }

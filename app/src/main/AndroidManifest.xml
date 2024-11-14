@@ -16,7 +16,7 @@
             android:name=".PaymentMethod"
             android:exported="false" />
         <activity
-            android:name=".SelectItems"
+            android:name=".SelectItemsView"
             android:exported="false" />
         <activity
             android:name=".view.PlaceOrderView"
