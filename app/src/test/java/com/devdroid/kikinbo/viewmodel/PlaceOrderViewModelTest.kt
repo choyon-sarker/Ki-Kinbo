@@ -287,41 +287,76 @@ class PlaceOrderViewModelTest {
         assertEquals("Email address pattern is invalid", viewModel.toastMessage)
     }
 
+    /**
+     * Tests the `isProductInStock` function when there is sufficient stock for the specified product.
+     *
+     * This test verifies that the function correctly returns `true` when the product is present
+     * in the list and has sufficient stock to meet the requested quantity.
+     *
+     * Expected Result:
+     * - The function should return `true`, indicating that the product has sufficient stock.
+     */
     @Test
     fun testIsProductInStockSufficientStock() {
         val orderItems = arrayListOf(
-            OrderItemDataModel("p001", "Headphone", 30, 5,20)  // Available stock is 5, requested quantity is 3
+            OrderItemDataModel("p001", "Headphone", 30, 5, 20)  // Available stock is 5, requested quantity is 3
         )
         val result = viewModel.isProductInStock("p001", 3, orderItems)
         assertTrue(result)  // The product should be in stock
     }
 
+    /**
+     * Tests the `isProductInStock` function when there is insufficient stock for the specified product.
+     *
+     * This test verifies that the function correctly returns `false` when the product is present
+     * in the list but does not have enough stock to meet the requested quantity.
+     *
+     * Expected Result:
+     * - The function should return `false`, indicating that the product has insufficient stock.
+     */
     @Test
     fun testIsProductInStockInsufficientStock() {
         val orderItems = arrayListOf(
-            OrderItemDataModel("p001", "Headphone", 3, 5,20)  // Available stock is 2, requested quantity is 3
+            OrderItemDataModel("p001", "Headphone", 3, 5, 20)  // Available stock is 2, requested quantity is 3
         )
-
         val result = viewModel.isProductInStock("p001", 5, orderItems)
-
         assertFalse(result)  // The product should not be in stock
     }
 
-
+    /**
+     * Tests the `isProductInStock` function when the specified product is not found in the list.
+     *
+     * This test verifies that the function correctly returns `false` when the product ID does not
+     * match any item in the order list.
+     *
+     * Expected Result:
+     * - The function should return `false`, indicating that the product is not found in the list.
+     */
     @Test
     fun testIsProductInStockProductNotFound() {
         val orderItems = arrayListOf(
-            OrderItemDataModel("p001", "Headphone", 5, 3,20)
+            OrderItemDataModel("p001", "Headphone", 5, 3, 20)
         )
         val result = viewModel.isProductInStock("Noproduct", 5, orderItems)
         assertFalse(result)  // The product should not be found
     }
 
+    /**
+     * Tests the validation of stock availability when all products have sufficient stock.
+     *
+     * This test verifies that the `validateStockAvailability` function correctly identifies
+     * that all products in the order list have sufficient stock. It ensures that the function
+     * returns `true` and that no `toastMessage` is set, as there are no stock issues.
+     *
+     * Expected Result:
+     * - The function should return `true`, indicating that all products have sufficient stock.
+     * - The `toastMessage` should be `null`, as there is no error related to stock.
+     */
     @Test
     fun testValidateStockAvailabilityAllProductsInStock() {
         val orderItems = arrayListOf(
-            OrderItemDataModel("p001", "Headphone", 30, 5,150),  // Available stock is 5, requested quantity is 3
-            OrderItemDataModel("p002", "Mouse", 20, 4,200)   // Available stock is 4, requested quantity is 2
+            OrderItemDataModel("p001", "Headphone", 30, 5, 150),  // Available stock is 5, requested quantity is 3
+            OrderItemDataModel("p002", "Mouse", 20, 4, 200)       // Available stock is 4, requested quantity is 2
         )
 
         val result = viewModel.validateStockAvailability(orderItems)
@@ -330,11 +365,23 @@ class PlaceOrderViewModelTest {
         assertNull(viewModel.toastMessage)  // No error message should be set
     }
 
+    /**
+     * Tests the validation of stock availability when one product has insufficient stock.
+     *
+     * This test verifies that the `validateStockAvailability` function correctly identifies a single
+     * product with insufficient stock in the order list. It ensures that the function returns `false`
+     * and that the `toastMessage` provides an error message indicating the product name and available stock.
+     *
+     * Expected Result:
+     * - The function should return `false`, indicating insufficient stock for one product.
+     * - The `toastMessage` should display "Insufficient stock for product: Headphone Only 10 available."
+     *   to inform about the stock limitation.
+     */
     @Test
     fun testValidateStockAvailabilityInsufficientStockForOneProduct() {
         val orderItems = arrayListOf(
-            OrderItemDataModel("p001", "Headphone", 10, 15,100),  // Available stock is 2, requested quantity is 3
-            OrderItemDataModel("p002", "Mouse", 20, 4,30)   // Available stock is 4, requested quantity is 2
+            OrderItemDataModel("p001", "Headphone", 10, 15, 100),  // Available stock is 10, requested quantity is 15
+            OrderItemDataModel("p002", "Mouse", 20, 4, 30)         // Available stock is 20, requested quantity is 4
         )
 
         val result = viewModel.validateStockAvailability(orderItems)
@@ -343,11 +390,23 @@ class PlaceOrderViewModelTest {
         assertEquals("Insufficient stock for product: Headphone Only 10 available.", viewModel.toastMessage)
     }
 
+    /**
+     * Tests the validation of stock availability when multiple products have insufficient stock.
+     *
+     * This test verifies that the `validateStockAvailability` function correctly identifies insufficient
+     * stock for multiple products in the order list. It ensures that the function returns `false`
+     * and that the `toastMessage` provides error messages for each product with insufficient stock.
+     *
+     * Expected Result:
+     * - The function should return `false`, indicating that some products do not have enough stock.
+     * - The `toastMessage` should contain error messages for each product with insufficient stock,
+     *   specifying the product name and the quantity available.
+     */
     @Test
     fun testValidateStockAvailabilityInsufficientStockForMultipleProducts() {
         val orderItems = arrayListOf(
-            OrderItemDataModel("p001", "Headphone", 3, 20, 100),  // Available stock is 100, requested quantity is 3
-            OrderItemDataModel("p002", "Mouse", 3, 10, 55)    // Available stock is 55, requested quantity is 3
+            OrderItemDataModel("p001", "Headphone", 3, 20, 100),  // Available stock is 3, requested quantity is 20
+            OrderItemDataModel("p002", "Mouse", 3, 10, 55)        // Available stock is 3, requested quantity is 10
         )
 
         val result = viewModel.validateStockAvailability(orderItems)
@@ -365,16 +424,30 @@ class PlaceOrderViewModelTest {
         assertEquals(expectedMessage, viewModel.toastMessage)
     }
 
+    /**
+     * Tests the validation of stock availability when multiple products have insufficient stock.
+     *
+     * This test verifies that the `validateStockAvailability` function correctly identifies and
+     * reports insufficient stock for multiple products in the order list. Specifically, it checks
+     * that each product with insufficient stock is reflected in the `toastMessage` with the correct
+     * available quantity.
+     *
+     * Expected Result:
+     * - The function should return `false`, indicating that some products do not have sufficient stock.
+     * - The `toastMessage` should contain error messages for each product with insufficient stock,
+     *   specifying the product name and the quantity available.
+     */
     @Test
     fun testValidateStockAvailabilityInsufficientStockForMultipleProducts2() {
         val orderItems = arrayListOf(
             OrderItemDataModel("p001", "Headphone", 3, 20, 600),  // Available stock is 3, requested quantity is 3
-            OrderItemDataModel("p002", "Mouse", 3, 10, 300),    // Available stock is 3, requested quantity is 3
-            OrderItemDataModel("p003","Keyboard",5,10,1200)      // Available stock is 5 , requested quantity is 10
+            OrderItemDataModel("p002", "Mouse", 3, 10, 300),      // Available stock is 3, requested quantity is 3
+            OrderItemDataModel("p003", "Keyboard", 5, 10, 1200)   // Available stock is 5, requested quantity is 10
         )
         val result = viewModel.validateStockAvailability(orderItems)
         assertFalse(result)  // Both products have insufficient stock
-        // Check that the toastMessage contains both error messages
+
+        // Check that the toastMessage contains all error messages
         val expectedMessage = """
         Insufficient stock for product: Headphone Only 3 available.
         Insufficient stock for product: Mouse Only 3 available.
@@ -383,6 +456,17 @@ class PlaceOrderViewModelTest {
         assertEquals(expectedMessage, viewModel.toastMessage)
     }
 
+    /**
+     * Tests the validation of stock availability with an empty order list.
+     *
+     * This test verifies that when the `validateStockAvailability` function is called with an empty
+     * list of order items, it correctly considers the scenario as valid since there are no products
+     * to check. The function should return `true` and no toast message should be set.
+     *
+     * Expected Result:
+     * - The function should return `true`, indicating that an empty order list is valid.
+     * - The `toastMessage` should be `null` as there is no error to display.
+     */
     @Test
     fun testValidateStockAvailabilityEmptyOrderList() {
         val orderItems = arrayListOf<OrderItemDataModel>()  // Empty order list
@@ -392,17 +476,22 @@ class PlaceOrderViewModelTest {
         assertTrue(result)  // An empty order list should be valid (no products to check)
         assertNull(viewModel.toastMessage)  // No error message should be set
     }
-
+    
+    /**
+     * Tests stock availability with mixed availability across multiple products.
+     *
+     * Expected Result:
+     * - Function returns `false` indicating insufficient stock.
+     * - Toast message: "Insufficient stock for product: Mouse Only 2 available."
+     */
     @Test
     fun testValidateStockAvailabilityMixedStockAvailability() {
         val orderItems = arrayListOf(
-            OrderItemDataModel("p001", "Headphone", 5, 3,30),  // Available stock is 5, requested quantity is 3
-            OrderItemDataModel("p002", "Mouse", 2, 3,60)   // Available stock is 2, requested quantity is 3
+            OrderItemDataModel("p001", "Headphone", 5, 3, 30),
+            OrderItemDataModel("p002", "Mouse", 2, 3, 60)
         )
-
         val result = viewModel.validateStockAvailability(orderItems)
-
-        assertFalse(result)  // Second product has insufficient stock
+        assertFalse(result)
         assertEquals("Insufficient stock for product: Mouse Only 2 available.", viewModel.toastMessage)
     }
 }
