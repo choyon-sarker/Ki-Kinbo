@@ -1,0 +1,87 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.devdroid.kikinbo.model.repository////PointingToDeclaration/app/com.devdroid.kikinbo.model.repository/index.html
+$dokka.location:com.devdroid.kikinbo.model.repository//dummyDatabase/#/PointingToDeclaration/app/com.devdroid.kikinbo.model.repository/dummy-database.html
+$dokka.location:com.devdroid.kikinbo.model.repository//order/#/PointingToDeclaration/app/com.devdroid.kikinbo.model.repository/order.html
+$dokka.location:com.devdroid.kikinbo.model.repository//userOrders/#/PointingToDeclaration/app/com.devdroid.kikinbo.model.repository/user-orders.html
+$dokka.location:com.devdroid.kikinbo.model.repository/DummyOrderDatabase///PointingToDeclaration/app/com.devdroid.kikinbo.model.repository/-dummy-order-database/index.html
+$dokka.location:com.devdroid.kikinbo.model.repository/DummyOrderDatabase/DummyOrderDatabase/#/PointingToDeclaration/app/com.devdroid.kikinbo.model.repository/-dummy-order-database/-dummy-order-database.html
+$dokka.location:com.devdroid.kikinbo.model.repository/DummyOrderDatabase/getOrderById/#kotlin.String/PointingToDeclaration/app/com.devdroid.kikinbo.model.repository/-dummy-order-database/get-order-by-id.html
+$dokka.location:com.devdroid.kikinbo.model.repository/DummyOrderDatabase/getOrdersByUserId/#kotlin.String/PointingToDeclaration/app/com.devdroid.kikinbo.model.repository/-dummy-order-database/get-orders-by-user-id.html
+$dokka.location:com.devdroid.kikinbo.model.repository/DummyOrderDatabase/orders/#/PointingToDeclaration/app/com.devdroid.kikinbo.model.repository/-dummy-order-database/orders.html
+$dokka.location:com.devdroid.kikinbo.model////PointingToDeclaration/app/com.devdroid.kikinbo.model/index.html
+$dokka.location:com.devdroid.kikinbo.model//demoUser1/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/demo-user1.html
+$dokka.location:com.devdroid.kikinbo.model//demoUser2/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/demo-user2.html
+$dokka.location:com.devdroid.kikinbo.model//demoUser3/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/demo-user3.html
+$dokka.location:com.devdroid.kikinbo.model//demoUser4/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/demo-user4.html
+$dokka.location:com.devdroid.kikinbo.model//demoUser5/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/demo-user5.html
+$dokka.location:com.devdroid.kikinbo.model//product1/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/product1.html
+$dokka.location:com.devdroid.kikinbo.model//product2/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/product2.html
+$dokka.location:com.devdroid.kikinbo.model//product3/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/product3.html
+$dokka.location:com.devdroid.kikinbo.model//product4/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/product4.html
+$dokka.location:com.devdroid.kikinbo.model//product5/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/product5.html
+$dokka.location:com.devdroid.kikinbo.model//product6/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/product6.html
+$dokka.location:com.devdroid.kikinbo.model/OrderInfo///PointingToDeclaration/app/com.devdroid.kikinbo.model/-order-info/index.html
+$dokka.location:com.devdroid.kikinbo.model/OrderInfo/OrderInfo/#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.Boolean/PointingToDeclaration/app/com.devdroid.kikinbo.model/-order-info/-order-info.html
+$dokka.location:com.devdroid.kikinbo.model/OrderInfo/maintainStatus/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-order-info/maintain-status.html
+$dokka.location:com.devdroid.kikinbo.model/OrderInfo/orderDateId/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-order-info/order-date-id.html
+$dokka.location:com.devdroid.kikinbo.model/OrderInfo/orderId/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-order-info/order-id.html
+$dokka.location:com.devdroid.kikinbo.model/OrderInfo/orderStatus/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-order-info/order-status.html
+$dokka.location:com.devdroid.kikinbo.model/OrderInfo/userId/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-order-info/user-id.html
+$dokka.location:com.devdroid.kikinbo.model/OrderItemDataModel///PointingToDeclaration/app/com.devdroid.kikinbo.model/-order-item-data-model/index.html
+$dokka.location:com.devdroid.kikinbo.model/OrderItemDataModel/OrderItemDataModel/#kotlin.String#kotlin.String#kotlin.Int#kotlin.Int/PointingToDeclaration/app/com.devdroid.kikinbo.model/-order-item-data-model/-order-item-data-model.html
+$dokka.location:com.devdroid.kikinbo.model/OrderItemDataModel/price/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-order-item-data-model/price.html
+$dokka.location:com.devdroid.kikinbo.model/OrderItemDataModel/productId/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-order-item-data-model/product-id.html
+$dokka.location:com.devdroid.kikinbo.model/OrderItemDataModel/productName/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-order-item-data-model/product-name.html
+$dokka.location:com.devdroid.kikinbo.model/OrderItemDataModel/quantity/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-order-item-data-model/quantity.html
+$dokka.location:com.devdroid.kikinbo.model/ProductDataModel///PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-data-model/index.html
+$dokka.location:com.devdroid.kikinbo.model/ProductDataModel/ProductDataModel/#kotlin.String?#kotlin.String?#kotlin.Int?#kotlin.Double?#kotlin.String?#kotlin.String?#kotlin.String?/PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-data-model/-product-data-model.html
+$dokka.location:com.devdroid.kikinbo.model/ProductDataModel/productCategory/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-data-model/product-category.html
+$dokka.location:com.devdroid.kikinbo.model/ProductDataModel/productDetail/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-data-model/product-detail.html
+$dokka.location:com.devdroid.kikinbo.model/ProductDataModel/productId/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-data-model/product-id.html
+$dokka.location:com.devdroid.kikinbo.model/ProductDataModel/productName/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-data-model/product-name.html
+$dokka.location:com.devdroid.kikinbo.model/ProductDataModel/productPrice/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-data-model/product-price.html
+$dokka.location:com.devdroid.kikinbo.model/ProductDataModel/productRating/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-data-model/product-rating.html
+$dokka.location:com.devdroid.kikinbo.model/ProductDataModel/productReview/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-product-data-model/product-review.html
+$dokka.location:com.devdroid.kikinbo.model/UserDataModel///PointingToDeclaration/app/com.devdroid.kikinbo.model/-user-data-model/index.html
+$dokka.location:com.devdroid.kikinbo.model/UserDataModel/UserDataModel/#kotlin.String#kotlin.String#kotlin.String#kotlin.String?/PointingToDeclaration/app/com.devdroid.kikinbo.model/-user-data-model/-user-data-model.html
+$dokka.location:com.devdroid.kikinbo.model/UserDataModel/email/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-user-data-model/email.html
+$dokka.location:com.devdroid.kikinbo.model/UserDataModel/phoneNumber/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-user-data-model/phone-number.html
+$dokka.location:com.devdroid.kikinbo.model/UserDataModel/userId/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-user-data-model/user-id.html
+$dokka.location:com.devdroid.kikinbo.model/UserDataModel/username/#/PointingToDeclaration/app/com.devdroid.kikinbo.model/-user-data-model/username.html
+$dokka.location:com.devdroid.kikinbo.repository////PointingToDeclaration/app/com.devdroid.kikinbo.repository/index.html
+$dokka.location:com.devdroid.kikinbo.repository/ProductRepository.ProductDataCallback///PointingToDeclaration/app/com.devdroid.kikinbo.repository/-product-repository/-product-data-callback/index.html
+$dokka.location:com.devdroid.kikinbo.repository/ProductRepository.ProductDataCallback/onDataLoaded/#kotlin.collections.List[com.devdroid.kikinbo.model.ProductDataModel]/PointingToDeclaration/app/com.devdroid.kikinbo.repository/-product-repository/-product-data-callback/on-data-loaded.html
+$dokka.location:com.devdroid.kikinbo.repository/ProductRepository.ProductDataCallback/onError/#com.google.firebase.database.DatabaseError/PointingToDeclaration/app/com.devdroid.kikinbo.repository/-product-repository/-product-data-callback/on-error.html
+$dokka.location:com.devdroid.kikinbo.repository/ProductRepository///PointingToDeclaration/app/com.devdroid.kikinbo.repository/-product-repository/index.html
+$dokka.location:com.devdroid.kikinbo.repository/ProductRepository/ProductRepository/#com.google.firebase.database.DatabaseReference/PointingToDeclaration/app/com.devdroid.kikinbo.repository/-product-repository/-product-repository.html
+$dokka.location:com.devdroid.kikinbo.repository/ProductRepository/addProduct/#com.devdroid.kikinbo.model.ProductDataModel/PointingToDeclaration/app/com.devdroid.kikinbo.repository/-product-repository/add-product.html
+$dokka.location:com.devdroid.kikinbo.repository/ProductRepository/filterProductsByCategory/#kotlin.String/PointingToDeclaration/app/com.devdroid.kikinbo.repository/-product-repository/filter-products-by-category.html
+$dokka.location:com.devdroid.kikinbo.repository/ProductRepository/filterProductsByName/#kotlin.String/PointingToDeclaration/app/com.devdroid.kikinbo.repository/-product-repository/filter-products-by-name.html
+$dokka.location:com.devdroid.kikinbo.repository/ProductRepository/loadProductData/#com.devdroid.kikinbo.repository.ProductRepository.ProductDataCallback/PointingToDeclaration/app/com.devdroid.kikinbo.repository/-product-repository/load-product-data.html
+$dokka.location:com.devdroid.kikinbo.view////PointingToDeclaration/app/com.devdroid.kikinbo.view/index.html
+$dokka.location:com.devdroid.kikinbo.view/CancelOrderView///PointingToDeclaration/app/com.devdroid.kikinbo.view/-cancel-order-view/index.html
+$dokka.location:com.devdroid.kikinbo.view/CancelOrderView/CancelOrderView/#/PointingToDeclaration/app/com.devdroid.kikinbo.view/-cancel-order-view/-cancel-order-view.html
+$dokka.location:com.devdroid.kikinbo.view/MainActivity///PointingToDeclaration/app/com.devdroid.kikinbo.view/-main-activity/index.html
+$dokka.location:com.devdroid.kikinbo.view/MainActivity/MainActivity/#/PointingToDeclaration/app/com.devdroid.kikinbo.view/-main-activity/-main-activity.html
+$dokka.location:com.devdroid.kikinbo.view/MainActivity/database/#/PointingToDeclaration/app/com.devdroid.kikinbo.view/-main-activity/database.html
+$dokka.location:com.devdroid.kikinbo.view/MainActivity/databaseRef/#/PointingToDeclaration/app/com.devdroid.kikinbo.view/-main-activity/database-ref.html
+$dokka.location:com.devdroid.kikinbo.viewmodel////PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/index.html
+$dokka.location:com.devdroid.kikinbo.viewmodel/CancelOrderViewModel///PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-cancel-order-view-model/index.html
+$dokka.location:com.devdroid.kikinbo.viewmodel/CancelOrderViewModel/CancelOrderViewModel/#/PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-cancel-order-view-model/-cancel-order-view-model.html
+$dokka.location:com.devdroid.kikinbo.viewmodel/CancelOrderViewModel/dataStore/#/PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-cancel-order-view-model/data-store.html
+$dokka.location:com.devdroid.kikinbo.viewmodel/CancelOrderViewModel/getOrderById/#kotlin.String/PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-cancel-order-view-model/get-order-by-id.html
+$dokka.location:com.devdroid.kikinbo.viewmodel/CancelOrderViewModel/maintainstatus/#/PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-cancel-order-view-model/maintainstatus.html
+$dokka.location:com.devdroid.kikinbo.viewmodel/CancelOrderViewModel/orderCanceled/#/PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-cancel-order-view-model/order-canceled.html
+$dokka.location:com.devdroid.kikinbo.viewmodel/CancelOrderViewModel/orderCanceled/#kotlin.String/PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-cancel-order-view-model/order-canceled.html
+$dokka.location:com.devdroid.kikinbo.viewmodel/CancelOrderViewModel/toastMessage/#/PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-cancel-order-view-model/toast-message.html
+$dokka.location:com.devdroid.kikinbo.viewmodel/CancelOrderViewModel/validOrderId/#kotlin.String/PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-cancel-order-view-model/valid-order-id.html
+$dokka.location:com.devdroid.kikinbo.viewmodel/PushUserData///PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-push-user-data/index.html
+$dokka.location:com.devdroid.kikinbo.viewmodel/PushUserData/PushUserData/#/PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-push-user-data/-push-user-data.html
+$dokka.location:com.devdroid.kikinbo.viewmodel/PushUserData/fPushUserData/#/PointingToDeclaration/app/com.devdroid.kikinbo.viewmodel/-push-user-data/f-push-user-data.html
+com.devdroid.kikinbo.model
+com.devdroid.kikinbo.model.repository
+com.devdroid.kikinbo.repository
+com.devdroid.kikinbo.view
+com.devdroid.kikinbo.viewmodel
+
