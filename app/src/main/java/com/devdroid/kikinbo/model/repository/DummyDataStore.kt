@@ -78,5 +78,4 @@ class DummyDataStore {
         ProductStockInto("Mouseid", "Mouse", 50),
         ProductStockInto("Penid", "Pen", 200)
     )
-
 }

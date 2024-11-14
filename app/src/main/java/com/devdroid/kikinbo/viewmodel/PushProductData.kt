@@ -1,11 +1,6 @@
 package com.devdroid.kikinbo.viewmodel
 
-import com.devdroid.kikinbo.model.product1
-import com.devdroid.kikinbo.model.product2
-import com.devdroid.kikinbo.model.product3
-import com.devdroid.kikinbo.model.product4
-import com.devdroid.kikinbo.model.product5
-import com.devdroid.kikinbo.model.product6
+import com.devdroid.kikinbo.model.repository.DummyProductInfoDataStore
 import com.google.firebase.database.FirebaseDatabase
 
 /**
@@ -23,6 +18,8 @@ class PushProductData {
     // Reference to the "Products" node in the database
     private val databaseRef = database.getReference("Products")
 
+    private val dummyproduct=DummyProductInfoDataStore()
+
     /**
      * Pushes predefined product data (product1 through product6) to the "Products" node in Firebase.
      *
@@ -30,12 +27,12 @@ class PushProductData {
      * If the operation succeeds, a success message is printed; otherwise, an error message is displayed.
      */
     fun pushProductData() {
-        databaseRef.push().setValue(product1)
-        databaseRef.push().setValue(product2)
-        databaseRef.push().setValue(product3)
-        databaseRef.push().setValue(product4)
-        databaseRef.push().setValue(product5)
-        databaseRef.push().setValue(product6)
+        databaseRef.push().setValue(dummyproduct.product1)
+        databaseRef.push().setValue(dummyproduct.product2)
+        databaseRef.push().setValue(dummyproduct.product3)
+        databaseRef.push().setValue(dummyproduct.product4)
+        databaseRef.push().setValue(dummyproduct.product5)
+        databaseRef.push().setValue(dummyproduct.product6)
             .addOnSuccessListener {
                 println("Product data added successfully!")
             }

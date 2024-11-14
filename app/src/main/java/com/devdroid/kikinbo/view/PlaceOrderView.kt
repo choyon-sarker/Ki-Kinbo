@@ -71,19 +71,6 @@ class PlaceOrderView : AppCompatActivity() {
 
         // Set up the Place Order button click listener
         btnPlaceOrder.setOnClickListener {
-//
-//        }
-//    }
-//
-//    /**
-//     * Handles the order placement process. Validates user inputs, collects shipping address details,
-//     * and calls the [PlaceOrderViewModel.placeOrder] function to place the order.
-//     * If order placement is successful, navigates to the [PaymentMethod] screen.
-//     *
-//     * @param orderItems The list of items being ordered by the user.
-//     * @param totalAmount The total cost of the items in the order.
-//     */
-//    private fun placeOrder(orderItems: ArrayList<OrderItemDataModel>?, totalAmount: Int) {
             val userId1 = userIdEditText.text.toString()
             val userPhone1 = userEditPhone.text.toString()
             val userEmail1 = userEditEmail.text.toString()
