@@ -140,7 +140,7 @@ The project uses dependencies for Firebase, Material Design, and AndroidX librar
 
 ## Generate Documentation 
 ### Watch the tutorial on our Youtube Channel
-A comprehensive and detailed tutorial on how to generate coding documentation using KDoc via Dokka. The tutorial includes a step-by-step procedure.
+A comprehensive and detailed tutorial on how to generate coding documentation using KDoc via Dokka. The tutorial includes a step-by-step procedure. 📝
 <p align="center">
   <a href="https://www.youtube.com/watch?v=lcpnnJtDdAU&t=2s">
     <img src="https://img.youtube.com/vi/lcpnnJtDdAU/maxresdefault.jpg" alt="Video Thumbnail" />
