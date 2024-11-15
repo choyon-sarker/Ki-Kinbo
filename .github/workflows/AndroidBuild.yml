@@ -25,4 +25,4 @@ jobs:
         uses: actions/upload-artifact@v4.4.3
         with:
           name: KiKinbo.apk
-          path: app/build/outputs/apk/app-debug.apk
+          path: app/build/outputs/apk/debug/app-debug.apk
