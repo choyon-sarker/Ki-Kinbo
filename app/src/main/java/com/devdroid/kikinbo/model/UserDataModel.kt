@@ -1,10 +1,10 @@
 package com.devdroid.kikinbo.model
 
 data class UserDataModel(
-    val userId: String,          // Unique ID for the user (e.g., Firebase UID or custom ID)
-    val username: String,        // Username of the user
-    val email: String,           // Email address of the user
-    val phoneNumber: String?,    // Optional phone number
+    val userId: String,
+    val username: String,
+    val email: String,
+    val phoneNumber: String?,
 )
 
 val demoUser1 = UserDataModel(
@@ -36,5 +36,11 @@ val demoUser5 = UserDataModel(
     username = "Nuzhat Net",
     email = "nuzhat@gmail.com",
     phoneNumber = "01965788243"
+)
+val demoUser6=UserDataModel(
+    userId="User6",
+    username="choyon",
+    email="choyon123@gmail.com",
+    phoneNumber = "01233454565"
 )
 

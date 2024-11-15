@@ -51,7 +51,7 @@ class CancelOrderView : AppCompatActivity() {
                 val i = Intent(this, MainActivity::class.java)
                 startActivity(i)
             } else {
-                // Displays an error message if the order cancellation failed
+                // Displays an error message if the order cancellation failed.
                 Toast.makeText(this, "Order cancellation failed", Toast.LENGTH_SHORT).show()
             }
         }
