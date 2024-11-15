@@ -1,4 +1,8 @@
 # Ki Kinbo! - An Online Supershop Management System
+<div align="center">
+  <img src="Resources/Ki-Kinbo!.png" alt="App PNG" />
+</div>
+
 Welcome to our _**Ki Kinbo! - An Online Supershop Management System**_. This project is a comprehensive Android application for managing a supershop, including features like product management, customer order placement, inventory tracking, and more.
 
 ### Team Name: **LessThanSix**
