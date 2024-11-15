@@ -17,9 +17,11 @@ class ProductSearchViewModel(private val productList: List<ProductDataModel>) {
      * @param query The search term to match product names against.
      * @return A list of products with names that contain the query string, ignoring case.
      */
+
     fun filterProductsByName(query: String): List<ProductDataModel> {
+        val trimmedQuery = query.trim()
         return productList.filter {
-            it.productName?.contains(query, ignoreCase = true) == true
+            it.productName?.contains(trimmedQuery, ignoreCase = true) == true
         }
     }
 
@@ -30,8 +32,9 @@ class ProductSearchViewModel(private val productList: List<ProductDataModel>) {
      * @return A list of products within the specified category, ignoring case.
      */
     fun filterProductsByCategory(category: String): List<ProductDataModel> {
+        val trimmedCategory = category.trim()
         return productList.filter {
-            it.productCategory?.contains(category, ignoreCase = true) == true
+            it.productCategory?.contains(trimmedCategory, ignoreCase = true) == true
         }
     }
 }

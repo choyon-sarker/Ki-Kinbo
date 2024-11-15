@@ -74,9 +74,10 @@ class SearchProduct : AppCompatActivity() {
         btnSearch.setOnClickListener {
             val query = ti_productSearch.text.toString().trim()
             if (query.isNotEmpty()) {
+                val normalizedQuery = query.trim()
                 val filteredResults = when (searchTypeGroup.checkedRadioButtonId) {
-                    R.id.radioSearchByName -> productRepository.filterProductsByName(query)
-                    R.id.radioSearchByCategory -> productRepository.filterProductsByCategory(query)
+                    R.id.radioSearchByName -> productRepository.filterProductsByName(normalizedQuery)
+                    R.id.radioSearchByCategory -> productRepository.filterProductsByCategory(normalizedQuery)
                     else -> emptyList()
                 }
 
